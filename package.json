@@ -1,0 +1,42 @@
+{
+  "name": "moderndeveloper-portfolio",
+  "version": "1.0.0",
+  "description": "A Modern Developer Project",
+  "scripts": {
+    "start": "gulp development",
+    "build": "NODE_ENV=production gulp build",
+    "clean": "gulp clean"
+  },
+  "author": "Jonathan Chan",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.14.0",
+    "browser-sync": "^2.15.0",
+    "del": "^2.2.2",
+    "eslint": "^3.4.0",
+    "eslint-config-cusxio": "^0.2.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-import": "^1.14.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-newer": "^1.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "modularscale-sass": "^2.1.1",
+    "typi": "^2.3.0"
+  }
+}

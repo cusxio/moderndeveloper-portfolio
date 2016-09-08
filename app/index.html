@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modern Developer</title>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="nav__user">
+                <span class="nav__user--first">Jonathan</span>
+                <span class="nav__user--last">Chan</span>
+            </div>
+            <ul class="nav__links">
+                <li class="active"><a href="/#about">About</a></li>
+                <li><a href="/#projects">Projects</a></li>
+                <li><a href="/#skills">Skills</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav__search">
+                <div class="nav__search--fields">
+                    <!-- htmlmin:ignore -->
+                    <input required type="text">
+                    <label>Search</label>
+                    <!-- htmlmin:ignore -->
+                </div>
+                <div class="nav__search--icon">
+                    <input type="checkbox" id="modal">
+                    <label for="modal"><i class="ion ion-ios-search-strong"></i></label>
+                    <div class="modal__container">
+                        <div>Search Temporarily Disabled</div>
+                        <label for="modal"><i class="ion ion-close-round"></i></label>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="about" id="about">
+            <div class="about__title">
+                <h1>About</h1>
+            </div>
+            <div class="about__intro">
+                <div class="about__intro--picture"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, reprehenderit harum, veritatis amet ducimus quasi aliquid consectetur molestiae eligendi itaque temporibus laudantium! Nisi placeat laborum quo eum sapiente, hic omnis
+                    itaque porro dolore unde quod. Repellat optio reiciendis architecto, inventore quo nemo at exercitationem iste veniam nobis, fuga animi aut autem quod pariatur alias et sunt saepe incidunt voluptatum doloremque, tempore reprehenderit
+                    tempora suscipit. Accusamus corporis quo ex, eligendi veritatis at excepturi optio recusandae illum amet. Nemo vel ipsam repudiandae sit, soluta, velit cupiditate saepe pariatur fugiat tenetur sint dicta ut illum totam eius hic ducimus
+                    ipsum atque autem possimus.</p>
+            </div>
+            <div class="divider"></div>
+        </section>
+        <section id="projects">
+            <div class="projects__title">
+                <h1>Projects</h1>
+            </div>
+            <div class="projects__intro">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic a aliquid laudantium nisi quibusdam nemo unde deleniti tempore possimus molestiae veniam suscipit eum, quod fugit provident qui. Quis ullam, facere ipsum tempore quos quisquam
+                    ut eos consectetur minus consequuntur eaque.</p>
+            </div>
+            <div class="projects__showcase">
+                <input type="radio" name="projects" id="project-1" checked>
+                <input type="radio" name="projects" id="project-2">
+                <input type="radio" name="projects" id="project-3">
+                <input type="radio" name="projects" id="project-4">
+                <input type="radio" name="projects" id="project-5">
+                <div class="projects__showcase--nav">
+                    <ul>
+                        <li>
+                            <label for="project-1">Button Web Component</label>
+                        </li>
+                        <li>
+                            <label for="project-2">Sidebar Component</label>
+                        </li>
+                        <li>
+                            <label for="project-3">Forms and Inputs</label>
+                        </li>
+                        <li>
+                            <label for="project-4">Calculator</label>
+                        </li>
+                        <li>
+                            <label for="project-5">Product Listing Page</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="projects__showcase--project">
+                    <div class="project__one">
+                        <div class="project__content--carousel">
+                            <input type="radio" name="project-1" id="p1i1" checked>
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i63.tinypic.com/10gb2c1.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-1" id="p1i2">
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i65.tinypic.com/10qfi4j.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-1" id="p1i3">
+                            <div class="carousel__item">
+                                <div class="carousel__item--demo">
+                                    Live Demo on the Next Slide !
+                                </div>
+                            </div>
+                            <input type="radio" name="project-1" id="p1i4">
+                            <div class="carousel__item">
+                                <iframe src="http://md-buttons.surge.sh" width="100%" height="530px"></iframe>
+                            </div>
+                            <div class="carousel__controls">
+                                <!-- Control 1 -->
+                                <label for="p1i4" class="carousel__control carousel__control--prev carousel__control--one"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p1i2" class="carousel__control carousel__control--next carousel__control--one"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 2 -->
+                                <label for="p1i1" class="carousel__control carousel__control--prev carousel__control--two"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p1i3" class="carousel__control carousel__control--next carousel__control--two"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 3 -->
+                                <label for="p1i2" class="carousel__control carousel__control--prev carousel__control--three"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p1i4" class="carousel__control carousel__control--next carousel__control--three"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 4 -->
+                                <label for="p1i3" class="carousel__control carousel__control--prev carousel__control--four"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p1i1" class="carousel__control carousel__control--next carousel__control--four"><i class="ion ion-ios-arrow-forward"></i></label>
+                            </div>
+                            <div class="carousel__indicators">
+                                <label for="p1i1"><i class="ion-record"></i></label>
+                                <label for="p1i2"><i class="ion-record"></i></label>
+                                <label for="p1i3"><i class="ion-record"></i></label>
+                                <label for="p1i4"><i class="ion-record"></i></label>
+                            </div>
+                        </div>
+                        <div class="project__content--information">
+                            <div class="information__tech">
+                                <span>Technologies: </span>HTML5, CSS3
+                            </div>
+                            <div class="information__description">
+                                Minimal buttons designed with Ionic Icons !
+                            </div>
+                            <div class="information__links">
+                                <a href="http://moderndeveloper-css.surge.sh/two/">moderndeveloper-css.surge.sh</a>
+                                <a href="https://github.com/cusxio/moderndeveloper-css/tree/master/project-assignment-2"><i class="ion ion-social-github"></i>Project Source on Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__two">
+                        <div class="project__content--carousel">
+                            <input type="radio" name="project-2" id="p2i1" checked>
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i66.tinypic.com/2hnp06e.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-2" id="p2i2">
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i64.tinypic.com/2exujhy.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-2" id="p2i3">
+                            <div class="carousel__item">
+                                <div class="carousel__item--demo">
+                                    Live Demo on the Next Slide !
+                                </div>
+                            </div>
+                            <input type="radio" name="project-2" id="p2i4">
+                            <div class="carousel__item">
+                                <iframe style="background-color: #FFF" src="http://md-sidebar.surge.sh" width="100%" height="530px"></iframe>
+                            </div>
+                            <div class="carousel__controls">
+                                <!-- Control 1 -->
+                                <label for="p2i4" class="carousel__control carousel__control--prev carousel__control--one"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p2i2" class="carousel__control carousel__control--next carousel__control--one"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 2 -->
+                                <label for="p2i1" class="carousel__control carousel__control--prev carousel__control--two"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p2i3" class="carousel__control carousel__control--next carousel__control--two"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 3 -->
+                                <label for="p2i2" class="carousel__control carousel__control--prev carousel__control--three"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p2i4" class="carousel__control carousel__control--next carousel__control--three"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 4 -->
+                                <label for="p2i3" class="carousel__control carousel__control--prev carousel__control--four"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p2i1" class="carousel__control carousel__control--next carousel__control--four"><i class="ion ion-ios-arrow-forward"></i></label>
+                            </div>
+                            <div class="carousel__indicators">
+                                <label for="p2i1"><i class="ion-record"></i></label>
+                                <label for="p2i2"><i class="ion-record"></i></label>
+                                <label for="p2i3"><i class="ion-record"></i></label>
+                                <label for="p2i4"><i class="ion-record"></i></label>
+                            </div>
+                        </div>
+                        <div class="project__content--information">
+                            <div class="information__tech">
+                                <span>Technologies: </span>HTML5, CSS3
+                            </div>
+                            <div class="information__description">
+                                A Sidebar component that will eventually be used on the Modern Developer platform.
+                            </div>
+                            <div class="information__links">
+                                <a href="http://moderndeveloper-css.surge.sh/three/">moderndeveloper-css.surge.sh</a>
+                                <a href="https://github.com/cusxio/moderndeveloper-css/tree/master/project-assignment-3"><i class="ion ion-social-github"></i>Project Source on Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__three">
+                        <div class="project__content--carousel">
+                            <input type="radio" name="project-3" id="p3i1" checked>
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i63.tinypic.com/20sj6e1.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-3" id="p3i2">
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i63.tinypic.com/2mr5zjp.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-3" id="p3i3">
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i67.tinypic.com/xeq36b.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-3" id="p3i4">
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i65.tinypic.com/2rz6rko.png" alt="">
+                                </div>
+                            </div>
+                            <div class="carousel__controls">
+                                <!-- Control 1 -->
+                                <label for="p3i4" class="carousel__control carousel__control--prev carousel__control--one"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p3i2" class="carousel__control carousel__control--next carousel__control--one"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 2 -->
+                                <label for="p3i1" class="carousel__control carousel__control--prev carousel__control--two"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p3i3" class="carousel__control carousel__control--next carousel__control--two"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 3 -->
+                                <label for="p3i2" class="carousel__control carousel__control--prev carousel__control--three"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p3i4" class="carousel__control carousel__control--next carousel__control--three"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 4 -->
+                                <label for="p3i3" class="carousel__control carousel__control--prev carousel__control--four"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p3i1" class="carousel__control carousel__control--next carousel__control--four"><i class="ion ion-ios-arrow-forward"></i></label>
+                            </div>
+                            <div class="carousel__indicators">
+                                <label for="p3i1"><i class="ion-record"></i></label>
+                                <label for="p3i2"><i class="ion-record"></i></label>
+                                <label for="p3i3"><i class="ion-record"></i></label>
+                                <label for="p3i4"><i class="ion-record"></i></label>
+                            </div>
+                        </div>
+                        <div class="project__content--information">
+                            <div class="information__tech">
+                                <span>Technologies: </span>HTML5, CSS3, JavaScript
+                            </div>
+                            <div class="information__description">
+                                Forms and inputs are liaisons between a user and a web app. This project aims to create beautiful and user friendly forms.
+                            </div>
+                            <div class="information__links">
+                                <a href="http://moderndeveloper-css.surge.sh/four/">moderndeveloper-css.surge.sh</a>
+                                <a href="https://github.com/cusxio/moderndeveloper-css/tree/master/project-assignment-4"><i class="ion ion-social-github"></i>Project Source on Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__four">
+                        <div class="project__content--carousel">
+                            <input type="radio" name="project-4" id="p4i1" checked>
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i66.tinypic.com/ou2y9w.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-4" id="p4i2">
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i67.tinypic.com/dceczq.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-4" id="p4i3">
+                            <div class="carousel__item">
+                                <div class="carousel__item--demo">
+                                    Live Demo on the Next Slide !
+                                </div>
+                            </div>
+                            <input type="radio" name="project-4" id="p4i4">
+                            <div class="carousel__item">
+                                <iframe src="http://md-calculator.surge.sh" width="100%" height="530px"></iframe>
+                            </div>
+                            <div class="carousel__controls">
+                                <!-- Control 1 -->
+                                <label for="p4i4" class="carousel__control carousel__control--prev carousel__control--one"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p4i2" class="carousel__control carousel__control--next carousel__control--one"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 2 -->
+                                <label for="p4i1" class="carousel__control carousel__control--prev carousel__control--two"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p4i3" class="carousel__control carousel__control--next carousel__control--two"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 3 -->
+                                <label for="p4i2" class="carousel__control carousel__control--prev carousel__control--three"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p4i4" class="carousel__control carousel__control--next carousel__control--three"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 4 -->
+                                <label for="p4i3" class="carousel__control carousel__control--prev carousel__control--four"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p4i1" class="carousel__control carousel__control--next carousel__control--four"><i class="ion ion-ios-arrow-forward"></i></label>
+                            </div>
+                            <div class="carousel__indicators">
+                                <label for="p4i1"><i class="ion-record"></i></label>
+                                <label for="p4i2"><i class="ion-record"></i></label>
+                                <label for="p4i3"><i class="ion-record"></i></label>
+                                <label for="p4i4"><i class="ion-record"></i></label>
+                            </div>
+                        </div>
+                        <div class="project__content--information">
+                            <div class="information__tech">
+                                <span>Technologies: </span>HTML5, CSS3, JavaScript
+                            </div>
+                            <div class="information__description">
+                                An alluring gradient-based calculator design. It also comes with unique hover states !
+                            </div>
+                            <div class="information__links">
+                                <a href="http://moderndeveloper-css.surge.sh/five/">moderndeveloper-css.surge.sh</a>
+                                <a href="https://github.com/cusxio/moderndeveloper-css/tree/master/project-assignment-5"><i class="ion ion-social-github"></i>Project Source on Github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__five">
+                        <div class="project__content--carousel">
+                            <input type="radio" name="project-5" id="p5i1" checked>
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i65.tinypic.com/261c36x.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-5" id="p5i2">
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i68.tinypic.com/334t0tt.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-5" id="p5i3">
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i68.tinypic.com/2e6hi15.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-5" id="p5i4">
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="http://i68.tinypic.com/rrqhph.png" alt="">
+                                </div>
+                            </div>
+                            <div class="carousel__controls">
+                                <!-- Control 1 -->
+                                <label for="p5i4" class="carousel__control carousel__control--prev carousel__control--one"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p5i2" class="carousel__control carousel__control--next carousel__control--one"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 2 -->
+                                <label for="p5i1" class="carousel__control carousel__control--prev carousel__control--two"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p5i3" class="carousel__control carousel__control--next carousel__control--two"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 3 -->
+                                <label for="p5i2" class="carousel__control carousel__control--prev carousel__control--three"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p5i4" class="carousel__control carousel__control--next carousel__control--three"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <!-- Control 4 -->
+                                <label for="p5i3" class="carousel__control carousel__control--prev carousel__control--four"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p5i1" class="carousel__control carousel__control--next carousel__control--four"><i class="ion ion-ios-arrow-forward"></i></label>
+                            </div>
+                            <div class="carousel__indicators">
+                                <label for="p5i1"><i class="ion-record"></i></label>
+                                <label for="p5i2"><i class="ion-record"></i></label>
+                                <label for="p5i3"><i class="ion-record"></i></label>
+                                <label for="p5i4"><i class="ion-record"></i></label>
+                            </div>
+                        </div>
+                        <div class="project__content--information">
+                            <div class="information__tech">
+                                <span>Technologies: </span>HTML5, CSS3, JavaScript
+                            </div>
+                            <div class="information__description">
+                                A classy gold-themed e-commerce website.
+                            </div>
+                            <div class="information__links">
+                                <a href="http://moderndeveloper-css.surge.sh/six/">moderndeveloper-css.surge.sh</a>
+                                <a href="https://github.com/cusxio/moderndeveloper-css/tree/master/project-assignment-6"><i class="ion ion-social-github"></i>Project Source on Github</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+        </section>
+        <section id="skills">
+            <div class="skills__title">
+                <h1>Skills</h1>
+            </div>
+            <div class="skills__intro">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio est veritatis laborum tempora iusto dolorum, asperiores provident voluptate aliquam accusamus voluptatibus ex culpa, ut natus quidem nostrum. Illum corporis, dignissimos quam debitis
+                facere assumenda autem, labore harum, nemo deserunt dolor! Quidem veritatis, dolor tempora unde alias corrupti debitis odit itaque?
+            </div>
+            <div class="skills__graphs">
+                <div class="skills__graphs--linear">
+                    <div class="linear__frontend">70%</div>
+                    <div class="linear__backend">30%</div>
+                </div>
+                <div class="skills__graphs--bar">
+                    <div class="bar__frontend">
+                        <table>
+                            <caption>Frontend Development</caption>
+                            <tbody>
+                                <tr>
+                                    <th>JavaScript</th>
+                                    <td data-tooltip="Expert"></td>
+                                </tr>
+                                <tr>
+                                    <th>HTML5/CSS3</th>
+                                    <td data-tooltip="Competent"></td>
+                                </tr>
+                                <tr>
+                                    <th>ReactJS</th>
+                                    <td data-tooltip="Proficient"></td>
+                                </tr>
+                                <tr>
+                                    <th>jQuery</th>
+                                    <td data-tooltip="Learning"></td>
+                                </tr>
+                                <tr>
+                                    <th>Lodash</th>
+                                    <td data-tooltip="Competent"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="bar__frontend--yaxis">
+                            <div>
+                                <p>Expert</p>
+                            </div>
+                            <div>
+                                <p>Proficient</p>
+                            </div>
+                            <div>
+                                <p>Competent</p>
+                            </div>
+                            <div>
+                                <p>Learning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar__backend">
+                        <table>
+                            <caption>Backend Development</caption>
+                            <tbody>
+                                <tr>
+                                    <th>AWS</th>
+                                    <td data-tooltip="Competent"></td>
+                                </tr>
+                                <tr>
+                                    <th>NodeJS</th>
+                                    <td data-tooltip="Expert"></td>
+                                </tr>
+                                <tr>
+                                    <th>PostgreSQL</th>
+                                    <td data-tooltip="Competent"></td>
+                                </tr>
+                                <tr>
+                                    <th>GoLang</th>
+                                    <td data-tooltip="Learning"></td>
+                                </tr>
+                                <tr>
+                                    <th>Docker</th>
+                                    <td data-tooltip="Competent"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="bar__backend--yaxis">
+                            <div>
+                                <p>Expert</p>
+                            </div>
+                            <div>
+                                <p>Proficient</p>
+                            </div>
+                            <div>
+                                <p>Competent</p>
+                            </div>
+                            <div>
+                                <p>Learning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar__other">
+                        <table>
+                            <caption>Other Skills</caption>
+                            <tbody>
+                                <tr>
+                                    <th>Public Speaking</th>
+                                    <td data-tooltip="Proficient"></td>
+                                </tr>
+                                <tr>
+                                    <th>Research</th>
+                                    <td data-tooltip="Expert"></td>
+                                </tr>
+                                <tr>
+                                    <th>Project Management</th>
+                                    <td data-tooltip="Competent"></td>
+                                </tr>
+                                <tr>
+                                    <th>Problem Solving</th>
+                                    <td data-tooltip="Expert"></td>
+                                </tr>
+                                <tr>
+                                    <th>Written Communication</th>
+                                    <td data-tooltip="Competent"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="bar__other--yaxis">
+                            <div>
+                                <p>Expert</p>
+                            </div>
+                            <div>
+                                <p>Proficient</p>
+                            </div>
+                            <div>
+                                <p>Competent</p>
+                            </div>
+                            <div>
+                                <p>Learning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+        </section>
+        <section id="contact">
+            <div class="contact__title">
+                <h1>Contact</h1>
+            </div>
+            <div class="contact__intro">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aliquam aspernatur iusto eos consequuntur, molestiae magni non amet, reiciendis quibusdam.
+            </div>
+            <label>
+                <input type="checkbox">
+                <div class="contact__card">
+                    <div class="contact__card--front">
+                        <div class="front__information">
+                            <h3>Jonathan Chan</h3>
+                            <p>Student at Modern Developer</p>
+                        </div>
+                        <div class="front__description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam harum possimus repellendus. Placeat saepe quidem cum. Aspernatur, neque, nisi.</p>
+                        </div>
+                        <div class="front__contact">
+                            <a href="">cus@cusx.io</a>
+                            <a href="">cusx.io</a>
+                        </div>
+                        <div class="front__links">
+                            <div class="front__links--ency">
+                                <div class="ency__logo">
+                                    <img src="http://i66.tinypic.com/r8tf8i.png" alt="" />
+                                </div>
+                                <div class="ency__md">
+                                    <p>Jonathan Chan</p>
+                                    <div>on <a href="">Encyclopedia.MD</a></div>
+                                </div>
+                            </div>
+                            <div class="front__links--social">
+                                <a href=""><img src="http://i64.tinypic.com/210c6qp.png" alt="" /></a>
+                                <a href=""><img src="http://i66.tinypic.com/30di1b4.png" alt="" /></a>
+                                <a href=""><img src="http://i66.tinypic.com/9pxe1y.png" alt="" /></a>
+                                <a href=""><img src="http://i63.tinypic.com/15wza6v.png" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__card--back">
+                        <p>
+                            Jonathan <span>C</span>han <span>U</span>ei <span>S</span>hen
+                        </p>
+                    </div>
+                </div>
+            </label>
+        </section>
+        <footer class="footer">
+            <div>&copy; <span class="footer__first">Jonathan</span> <span class="footer__last">Chan</span></div>
+        </footer>
+    </div>
+    <!-- build:js scripts/main.min.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

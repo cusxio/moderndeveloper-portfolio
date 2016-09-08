@@ -1,0 +1,106 @@
+//===================
+// NAVIGATION
+//===================
+
+nav
+    width: 100%
+    position: fixed
+    top: 0
+    font-size: ms(0)
+    height: 4.8rem
+    background-color: $dark-pink
+    display: flex
+    padding: 0 1.2rem
+    border-bottom: 8px solid $light-pink
+    border-top: 8px solid $dark-pink
+    z-index: 99
+
+.nav__user
+    display: flex
+    align-items: center
+    justify-content: center
+    flex: 1 0 20%
+    color: #FFF
+    text-transform: uppercase
+    .nav__user--first
+        font-weight: 300
+        margin-right: 0.15rem
+    .nav__user--last
+        font-weight: 500
+
+.nav__links
+    flex: 1 0 50%
+    list-style: none
+    display: flex
+    li
+        display: flex
+        align-items: center
+        transition: background-color 0.2s ease-in
+        &:first-child
+            margin-left: 0
+        &.active
+            background-color: #ED68B1
+            border-top-right-radius: 2px
+            border-top-left-radius: 2px
+            a
+                color: rgba(255,255,255,1)
+    label
+        z-index: 50
+    a
+        transition: color 0.2s ease-in
+        margin: 0 1.2rem
+        text-decoration: none
+        color: rgba(255,255,255,0.3)
+        font-weight: 400
+        &:hover
+            color: rgba(255,255,255,0.6)
+
+.nav__search
+    align-items: center
+    display: flex
+    flex: 1 0 30%
+    justify-content: flex-end
+
+.nav__search--fields
+    position: relative
+    label
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        transition: all 0.2s ease
+        text-transform: uppercase
+        color: rgba(255,255,255, 0.5)
+        font-size: ms(-1)
+    input[type=text]
+        z-index: 1
+        position: relative
+        border: 0
+        background-color: transparent
+        border-bottom: 1px solid rgba(255,255,255, 0.5)
+        transition: all 0.2s ease
+        color: #fff
+        &:focus
+            outline: none
+            border-bottom: 1px solid rgba(255,255,255,1)
+
+.nav__search--fields input[type=text]:valid ~ label,
+.nav__search--fields input[type=text]:focus ~ label,
+    color: #fff
+    font-size: ms(-1)
+    top: -50%
+
+.nav__search--icon
+    margin-left: 1.2rem
+    font-size: ms(1)
+    color: rgba(255,255,255,0.5)
+    > label
+        display: block
+        border: 1px solid rgba(255,255,255,0.5)
+        border-radius: 3px
+        padding: 2px 8px
+    input[type=checkbox]
+        display: none
+    label
+        cursor: pointer
+        user-select: none

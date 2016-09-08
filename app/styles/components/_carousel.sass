@@ -1,0 +1,68 @@
+//===================
+// CAROUSEL
+//===================
+
+.project__content--carousel
+    position: relative
+    input[type=radio]
+        display: none
+        &:checked
+            + .carousel__item
+                display: block
+
+.project__content--carousel
+    input[type=radio]:nth-of-type(1):checked ~ .carousel__controls .carousel__control--one,
+    input[type=radio]:nth-of-type(2):checked ~ .carousel__controls .carousel__control--two,
+    input[type=radio]:nth-of-type(3):checked ~ .carousel__controls .carousel__control--three,
+    input[type=radio]:nth-of-type(4):checked ~ .carousel__controls .carousel__control--four
+        display: block
+    input[type=radio]:nth-of-type(1):checked ~ .carousel__indicators label:nth-child(1),
+    input[type=radio]:nth-of-type(2):checked ~ .carousel__indicators label:nth-child(2),
+    input[type=radio]:nth-of-type(3):checked ~ .carousel__indicators label:nth-child(3),
+    input[type=radio]:nth-of-type(4):checked ~ .carousel__indicators label:nth-child(4)
+        color: $dark-pink
+
+.carousel__item
+    display: none
+    padding: 0 20% 1.2rem
+
+.carousel__item--screenshot
+    img
+        width: 100%
+        height: auto
+        border-radius: 3px
+
+.carousel__item--demo
+    display: flex
+    height: 530px
+    width: 100%
+    color: #fff
+    justify-content: center
+    align-items: center
+
+.carousel__control
+    display: none
+    font-size: 1.2rem
+    position: absolute
+    top: 50%
+    cursor: pointer
+    color: #805D6F
+
+.carousel__control--prev
+    left: 10%
+
+.carousel__control--next
+    right: 10%
+
+.carousel__indicators
+    user-select: none
+    width: 100%
+    text-align: center
+    color: #B4B4B3
+    font-size: ms(-1)
+    label
+        cursor: pointer
+        transition: color 0.2s ease-in
+        margin-left: 0.3rem
+        &:nth-child(1)
+            margin-left: 0

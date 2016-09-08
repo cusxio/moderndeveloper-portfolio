@@ -1,0 +1,43 @@
+@import 'vendors/normalize.scss'
+@import 'utils/typography.scss'
+@import 'utils/_tooltip.scss'
+
+//===================
+// GENERAL
+//===================
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+$gray: #4C4A4A
+$dark-pink: #CF4C95
+$light-pink: #ED68B1
+
+//===================
+// DIVIDER
+//===================
+
+.divider
+    border-bottom: 1px solid #E5E4E4
+    margin: 2.4rem 0
+
+:target::before
+    content: ""
+    display: block
+    height: 7.2rem
+    margin: -7.2rem 0 0
+
+
+@import 'components/navigation.sass'
+@import 'components/modal.sass'
+@import 'components/about.sass'
+@import 'components/projects.sass'
+@import 'components/carousel.sass'
+@import 'components/skills.sass'
+@import 'components/charts.sass'
+@import 'components/contact.sass'
+@import 'components/footer.sass'

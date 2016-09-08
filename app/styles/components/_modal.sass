@@ -1,0 +1,25 @@
+//===================
+// Modal Container
+//===================
+
+.modal__container
+    position: fixed
+    display: none
+    align-items: center
+    justify-content: center
+    top: 4.8rem
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: #fff
+    color: $dark-pink
+    font-size: ms(2)
+    label
+        position: absolute
+        top: 2.4rem
+        right: 2.4rem
+        color: #000
+
+.nav__search--icon
+    input[type=checkbox]:checked ~ .modal__container
+        display: flex

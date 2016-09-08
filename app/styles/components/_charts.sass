@@ -1,0 +1,189 @@
+//===================
+// CHARTS
+//===================
+
+.skills__graphs--linear
+    color: #fff
+    display: flex
+    width: 70%
+    height: 1.8rem
+    margin: 0 auto 3.6rem
+
+.linear__frontend
+    padding-left: 0.6rem
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 70%
+    background-color: #FF4459
+    border-top-left-radius: 3px
+    border-bottom-left-radius: 3px
+
+.linear__backend
+    padding-right: 0.6rem
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    width: 30%
+    background-color: #376EEE
+    border-top-right-radius: 3px
+    border-bottom-right-radius: 3px
+
+
+.skills__graphs--bar
+    width: 80%
+    height: 100%
+    margin: 6rem auto 0
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.bar__frontend, .bar__backend, .bar__other
+    width: 40%
+    height: 185px
+    table
+        position: relative
+        width: 100%
+        height: 184px
+        caption
+            position: relative
+            caption-side: top
+            top: -2.4rem
+            width: 100%
+            font-weight: 500
+        tr, th, td
+            position: absolute
+            bottom: 0
+            width: 20%
+        tr
+            height: 180px
+            border-bottom: 1px solid silver
+            &:nth-child(1)
+                left: 0
+                td
+            &:nth-child(2)
+                left: 20%
+                td
+            &:nth-child(3)
+                left: 40%
+                td
+            &:nth-child(4)
+                left: 60%
+                td
+            &:nth-child(5)
+                left: 80%
+                td
+        th
+            bottom: 5%
+            text-align: left
+            transform: rotateZ(40deg) translateX(3rem)
+            font-weight: 400
+            color: rgba(0,0,0,0.8)
+            font-size: ms(-1)
+        td
+            z-index: 50
+            width: 50%
+            left: 25%
+            border-top-left-radius: 3px
+            border-top-right-radius: 3px
+
+.bar__frontend--yaxis, .bar__backend--yaxis, .bar__other--yaxis
+    position: relative
+    top: -184px
+    margin-bottom: -184px
+    width: 100%
+    height: 184px
+    font-size: ms(-1)
+    color: rgba(0,0,0,0.8)
+    > div
+        position: relative
+        height: 45px
+        p
+            width: 200px
+            text-align: right
+            position: absolute
+            left: -13rem
+            top: 0
+
+.bar__frontend
+    caption
+        color: #FF3550
+    table
+        tr
+            &:nth-child(1)
+                td
+                    height: 100%
+                    background-color: #FFA733
+            &:nth-child(2)
+                td
+                    height: 50%
+                    background-color: #00BEF2
+            &:nth-child(3)
+                td
+                    height: 75%
+                    background-color: #00D717
+            &:nth-child(4)
+                td
+                    height: 25%
+                    background-color: #FF80B0
+            &:nth-child(5)
+                td
+                    height: 50%
+                    background-color: #F3E200
+
+.bar__backend
+    caption
+        color: #376EEE
+    table
+        tr
+            &:nth-child(1)
+                td
+                    height: 50%
+                    background-color: #FFA733
+            &:nth-child(2)
+                td
+                    height: 100%
+                    background-color: #00BEF2
+            &:nth-child(3)
+                td
+                    height: 50%
+                    background-color: #00D717
+            &:nth-child(4)
+                td
+                    height: 25%
+                    background-color: #FF80B0
+            &:nth-child(5)
+                td
+                    height: 50%
+                    background-color: #F3E200
+
+.bar__other
+    margin-top: 9.6rem
+    margin-left: 50%
+    transform: translateX(-50%)
+    caption
+        color: #2C2C2C
+    table
+        tr
+            &:nth-child(1)
+                td
+                    height: 75%
+                    background-color: #82D250
+            &:nth-child(2)
+                td
+                    height: 100%
+                    background-color: #00CC93
+            &:nth-child(3)
+                td
+                    height: 50%
+                    background-color: #00C5F4
+            &:nth-child(4)
+                td
+                    height: 100%
+                    background-color: #879DFF
+            &:nth-child(5)
+                td
+                    height: 50%
+                    background-color: #E092FF
+        th
+            transform: rotate(45deg) translate(2.5rem, 1.2rem)
