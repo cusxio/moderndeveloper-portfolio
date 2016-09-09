@@ -30,7 +30,8 @@ gulp.task('styles', () => {
     .pipe($.if(!PRODUCTION, gulp.dest('.tmp/styles')))
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(PRODUCTION, $.size({ title: 'Styles' })))
-    .pipe($.if(PRODUCTION, gulp.dest('dist/styles')));
+    .pipe($.if(PRODUCTION, gulp.dest('dist/styles')))
+    .pipe(bs.stream({ match: '**/*.css' }));
 });
 
 gulp.task('scripts', () => {
@@ -58,7 +59,7 @@ gulp.task('development', ['scripts', 'styles'], () => {
     });
 
     gulp.watch(['app/**/*.html'], bs.reload);
-    gulp.watch(['app/styles/**/*.{scss,sass,css}'], ['styles', bs.reload]);
+    gulp.watch(['app/styles/**/*.{sass,scss,css}'], ['styles']);
     gulp.watch(['app/scripts/**/*.js'], ['scripts', bs.reload]);
     gulp.watch(['app/images/**/*'], bs.reload);
 });
