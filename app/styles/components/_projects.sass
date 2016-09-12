@@ -7,21 +7,33 @@
     padding: 0 2.4rem
 
 .projects__title
+    margin-bottom: 3.6rem
     h1
         margin: 0 0 1.2rem
-        text-align: center
+        text-align: right
         font-weight: 300
         color: $light-pink
+        letter-spacing: 2px
+        font-size: ms(3)
+        text-transform: uppercase
+        span
+            color: rgba(0, 0, 0, 0.54)
 
 .projects__intro
     width: 80%
-    color: #aaa
+    color: rgba(0, 0, 0, 0.54)
     line-height: 2.4rem
-    margin: 0 auto 1.2rem
+    margin: 0 auto 4.8rem
+    a
+        text-decoration: none
+        color: $light-pink
+        transition: color 0.25s ease-in-out
+        &:hover
+            color: $dark-pink
 
 .projects__showcase
     display: flex
-    padding-bottom: 1.2rem
+    margin-bottom: 9.6rem
     input[type=radio]
         display: none
 
@@ -36,14 +48,14 @@
         cursor: pointer
         padding: 1.2rem
         display: block
-        color: #414141
+        color: rgba(0, 0, 0, 0.54)
 
 #project-1:checked ~ .projects__showcase--nav ul li:nth-child(1),
 #project-2:checked ~ .projects__showcase--nav ul li:nth-child(2),
 #project-3:checked ~ .projects__showcase--nav ul li:nth-child(3),
 #project-4:checked ~ .projects__showcase--nav ul li:nth-child(4),
 #project-5:checked ~ .projects__showcase--nav ul li:nth-child(5),
-    background-color: $gray
+    background-color: #F2F2F2
 
 #project-1:checked ~ .projects__showcase--nav ul li:nth-child(1) label,
 #project-2:checked ~ .projects__showcase--nav ul li:nth-child(2) label,
@@ -51,12 +63,12 @@
 #project-4:checked ~ .projects__showcase--nav ul li:nth-child(4) label,
 #project-5:checked ~ .projects__showcase--nav ul li:nth-child(5) label,
     color: #FF51B5
-    font-weight: 700
+    font-weight: 500
 
 .projects__showcase--project
     padding: 1.2rem
     width: 75%
-    background-color: $gray
+    background-color: #F2F2F2
     border-radius: 3px
     > div
         display: none
@@ -75,29 +87,31 @@
     margin-top: 1.2rem
 
 .information__tech
-    color: rgba(255,255,255,0.8)
+    color: rgba(0, 0, 0, 0.54)
     span
-        color: #FFF
+        color: rgba(0, 0, 0, 0.54)
         font-weight: 700
 
 .information__description
     margin-top: 1.2rem
     line-height: 1.2
-    color: rgba(255,255,255,0.8)
+    color: rgba(0, 0, 0, 0.54)
 
 .information__links
     margin-top: 1.2rem
     a
         text-decoration: none
-        transition: color 0.2s ease-in-out
+        transition: color 0.25s ease-in-out
         &:nth-of-type(1)
-            color: #7DA1F8
+            color: $light-pink
             &:hover
-                color: #7090df
+                color: $dark-pink
         &:nth-of-type(2)
             color: #9D9D9D
             margin-left: 1.2rem
             &:hover
-                color: #8d8d8d
-            i
-                margin-right: 0.3rem
+                color: #636262
+        i
+            font-size: 1.2rem
+            vertical-align: top
+            margin-right: 0.3rem

@@ -2,31 +2,51 @@
 // About
 //===================
 
-.about
+#about
     max-width: 60rem
     margin: 0 auto
-    padding: 7.2rem 2.4rem 0
+    padding: 0 2.4rem
 
 .about__title
+    margin-bottom: 3.6rem
     h1
         margin: 0 0 1.2rem
-        text-align: center
+        text-align: right
         font-weight: 300
         color: $light-pink
+        letter-spacing: 2px
+        font-size: ms(3)
+        text-transform: uppercase
+        span
+            color: rgba(0, 0, 0, 0.54)
 
 .about__intro
     width: 80%
-    color: #aaa
-    line-height: 2.4rem
-    margin: 0 auto
 
-.about__intro--picture
-    width: 7.2rem
-    height: 7.2rem
-    background-color: #aaa
-    border-radius: 6px
-    background-image: url('http://i67.tinypic.com/nc1ahd.jpg')
-    background-size: cover
-    border: 5px solid #f5f5f5
-    margin: 0 auto
-    margin-bottom: 1.2rem
+.about__intro--hey
+    margin: 0 0 2.4rem
+
+.about__intro--do
+    font-size: ms(4)
+    line-height: 3.6rem
+    margin-bottom: 2.4rem
+    font-weight: 100
+    span
+        font-weight: 500
+
+.about__intro--contact
+    font-size: ms(4)
+    line-height: 3.6rem
+    margin-bottom: 9.6rem
+    font-weight: 100
+    span
+        font-weight: 500
+    a
+        cursor: pointer
+        text-decoration: none
+        color: $light-pink
+        border-bottom: 3px solid $light-pink
+        transition: all 0.25s ease-in-out
+        &:hover
+            color: $dark-pink
+            border-color: $dark-pink

@@ -13,6 +13,9 @@ nav
     padding: 0 2.4rem
     border-bottom: 1px solid rgba(0,0,0,0.14)
     z-index: 99
+    transition: box-shadow 0.25s ease-in-out
+    &.body-is-scrolled
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06),0 4px 5px 0 rgba(0,0,0,0.06),0 1px 10px 0 rgba(0,0,0,0.08)
 
 .nav__user
     display: flex
@@ -36,8 +39,6 @@ nav
     align-items: center
     li
         display: flex
-    label
-        z-index: 50
     a
         margin: 0 1.2rem
         text-decoration: none
@@ -47,6 +48,8 @@ nav
         font-size: 14px
         transition: color 0.25s
         letter-spacing: 0.025rem
+        &.nav-active
+            color: $dark-pink
         &:hover
             color: $dark-pink
             &::before
