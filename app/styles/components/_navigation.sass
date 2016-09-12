@@ -8,11 +8,10 @@ nav
     top: 0
     font-size: ms(0)
     height: 4.8rem
-    background-color: $dark-pink
+    background-color: #fff
     display: flex
-    padding: 0 1.2rem
-    border-bottom: 8px solid $light-pink
-    border-top: 8px solid $dark-pink
+    padding: 0 2.4rem
+    border-bottom: 1px solid rgba(0,0,0,0.14)
     z-index: 99
 
 .nav__user
@@ -20,8 +19,10 @@ nav
     align-items: center
     justify-content: center
     flex: 1 0 20%
-    color: #FFF
+    color: rgba(0,0,0,0.54)
     text-transform: uppercase
+    font-size: ms(1)
+    letter-spacing: 0.025rem
     .nav__user--first
         font-weight: 300
         margin-right: 0.15rem
@@ -32,73 +33,79 @@ nav
     flex: 1 0 50%
     list-style: none
     display: flex
+    align-items: center
     li
         display: flex
-        align-items: center
-        transition: background-color 0.2s ease-in
-        &:first-child
-            margin-left: 0
-        &.active
-            background-color: #ED68B1
-            border-top-right-radius: 2px
-            border-top-left-radius: 2px
-            a
-                color: rgba(255,255,255,1)
     label
         z-index: 50
     a
-        transition: color 0.2s ease-in
         margin: 0 1.2rem
         text-decoration: none
-        color: rgba(255,255,255,0.3)
+        color: rgba(0,0,0,0.54)
         font-weight: 400
+        text-transform: uppercase
+        font-size: 14px
+        transition: color 0.25s
+        letter-spacing: 0.025rem
         &:hover
-            color: rgba(255,255,255,0.6)
+            color: $dark-pink
+            &::before
+                opacity: 1
+                width: 100%
+        &::before
+            transition-duration: 0.25s
+            content: ''
+            height: 2px
+            width: 0
+            background: $dark-pink
+            position: relative
+            margin-left: auto
+            margin-right: auto
+            display: block
+            opacity: 0
+            top: 25px
+
 
 .nav__search
-    align-items: center
     display: flex
     flex: 1 0 30%
     justify-content: flex-end
 
 .nav__search--fields
     position: relative
+    top: 2rem
+    height: 32px
     label
         position: absolute
-        top: 50%
+        transform: translate3d(0,-13px,0) scale(1)
         left: 0
-        transform: translateY(-50%)
-        transition: all 0.2s ease
-        text-transform: uppercase
-        color: rgba(255,255,255, 0.5)
-        font-size: ms(-1)
+        bottom: 0
+        transition: transform 0.25s cubic-bezier(0.25,0.8,0.25,1)
+        color: rgba(0,0,0,0.26)
+        transform-origin: left top
     input[type=text]
         z-index: 1
         position: relative
         border: 0
+        padding-bottom: 2px
         background-color: transparent
-        border-bottom: 1px solid rgba(255,255,255, 0.5)
-        transition: all 0.2s ease
-        color: #fff
+        border-bottom: 1px solid rgba(0,0,0,0.12)
+        color: rgba(0,0,0,0.87)
         &:focus
             outline: none
-            border-bottom: 1px solid rgba(255,255,255,1)
+            border-bottom: 2px solid $dark-pink
 
 .nav__search--fields input[type=text]:valid ~ label,
 .nav__search--fields input[type=text]:focus ~ label,
-    color: #fff
-    font-size: ms(-1)
-    top: -50%
+    color: $dark-pink
+    transform: translate3d(0,-30px,0) scale(0.75)
 
 .nav__search--icon
-    margin-left: 1.2rem
-    font-size: ms(1)
-    color: rgba(255,255,255,0.5)
-    > label
-        display: block
-        border: 1px solid rgba(255,255,255,0.5)
-        border-radius: 3px
-        padding: 2px 8px
+    display: flex
+    align-items: center
+    margin-left: 0.6rem
+    font-size: 1.5rem
+    color: rgba(0,0,0,0.54)
     input[type=checkbox]
         display: none
     label
