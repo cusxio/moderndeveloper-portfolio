@@ -12,7 +12,7 @@ nav
     background-color: #fff
     display: flex
     align-items: flex-start
-    padding: 0 2.4rem
+    padding: 0 1.2rem
     border-bottom: 1px solid rgba(0,0,0,0.14)
     z-index: 99
     transition: box-shadow 0.25s ease-in-out
@@ -20,35 +20,20 @@ nav
         box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06),0 4px 5px 0 rgba(0,0,0,0.06),0 1px 10px 0 rgba(0,0,0,0.08)
 
 .nav__user
-    // display: flex
-    // align-items: center
-    // justify-content: center
-    // flex: 1 0 20%
     position: relative
-    top: 0.9rem
+    top: 1.61875rem
+    color: rgba(0,0,0,0.54)
+    text-transform: uppercase
+    font-size: ms(1)
+    letter-spacing: 0.025rem
 
-.nav__user--logo
-    user-select: none
-    cursor: default
-    width: 3rem
-    height: 3rem
-    background-color: rgba(0,0,0,0.87)
-    display: flex
-    align-items: center
-    justify-content: center
-    border-radius: 50px
-    color: #fff
+.nav__user--first
+    font-weight: 300
 
-.logo__first
-    font-size: 20px
-.logo__last
-    font-size: 12px
-    font-weight: 800
+.nav__user--last
+    font-weight: 500
 
 .nav__links
-    // flex: 1 0 50%
-    // list-style: none
-    // align-items: center
     position: relative
     flex: 1
     text-align: right
@@ -85,7 +70,6 @@ nav
             display: block
             opacity: 0
             top: 25px
-
 
 .nav__search
     position: relative
@@ -135,3 +119,28 @@ nav
     label
         cursor: pointer
         user-select: none
+
+.nav__hamburger
+    opacity: 0
+    position: relative
+    top: 1.92375rem
+    width: 40px
+    cursor: pointer
+    transform: translate3d(0, 0, 0)
+    transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98)
+
+.nav__hamburger--layer
+    background-color: rgba(0,0,0,0.54)
+    margin-bottom: 5px
+    border-radius: 2px
+    width: 20px
+    height: 2px
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98)
+
+.nav__hamburger:hover
+    .-top
+        transform: translateY(-100%)
+    .-bottom
+        transform: translateY(100%)
