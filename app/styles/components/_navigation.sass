@@ -94,12 +94,14 @@ nav
         background-color: transparent
         border-bottom: 1px solid rgba(0,0,0,0.12)
         color: rgba(0,0,0,0.87)
+        outline: 0
         &:focus
-            outline: none
             border-bottom: 2px solid $dark-pink
 
-.nav__search--fields input[type=text]:valid ~ label,
-.nav__search--fields input[type=text]:focus ~ label,
+.nav__search--fields input[type=text]:valid ~ label
+    transform: translate3d(0,-30px,0) scale(0.75)
+
+.nav__search--fields input[type=text]:focus ~ label
     color: $dark-pink
     transform: translate3d(0,-30px,0) scale(0.75)
 
