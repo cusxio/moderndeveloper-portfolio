@@ -17,8 +17,18 @@
         letter-spacing: 2px
         font-size: ms(3)
         text-transform: uppercase
+        position: relative
         span
             color: rgba(0, 0, 0, 0.54)
+        &::after
+            content: 'C'
+            position: absolute
+            top: -3.6rem
+            color: #f1f1f1
+            font-weight: 900
+            font-size: ms(8)
+            right: 0
+            z-index: -1
 
 
 .contact__intro
