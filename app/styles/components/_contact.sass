@@ -3,7 +3,7 @@
 //===================
 
 #contact
-    margin: 0 auto
+    margin: 0 auto 4.8rem
     max-width: 60rem
     padding: 0 2.4rem
 
@@ -23,126 +23,122 @@
 
 .contact__intro
     width: 80%
-    margin: 0 auto 2.4rem
+    margin: 0 auto 4.8rem
+    font-weight: 500
     h1
+        text-transform: uppercase
         text-align: center
         font-weight: 700
         span
             border-bottom: 3px solid rgba(0, 0, 0, 0.87)
 
-//===================
-// CONTACT CARD
-//===================
+.contact__intro--tags
+    text-align: center
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 500
+    letter-spacing: 0.025rem
+    span
+        &:nth-child(2), &:nth-child(3)
+            font-weight: 900
+            font-size: ms(1)
+            vertical-align: middle
+            margin: 0 0.025rem
+        &:nth-child(1)
+            color: $light-pink
 
-#contact label
-    display: block
-    perspective: 1000px
-    transform-style: preserve-3d
-    width: 630px
-    height: 375px
-    margin: 2.4rem auto
-    &:hover .contact__card
-        transform: rotateX(20deg)
-        box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2)
-    &:hover input[type=checkbox]:checked + .contact__card
-        transform: rotateX(160deg)
-        box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2)
+.contact__form
+    width: 80%
+    display: flex
+    flex-flow: row wrap
+    margin: 0 auto
+    input
+        width: 100%
+        appearance: none
+        border: 0
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12)
+        outline: 0
+        padding-bottom: 2px
+        color: rgba(0, 0, 0, 0.87)
+        &:active, &:focus
+            border-bottom: 2px solid $dark-pink
+        &:valid ~ label
+            transform: translate3d(0,-30px,0) scale(0.75)
+        &:focus ~ label
+            color: $dark-pink
+            transform: translate3d(0,-30px,0) scale(0.75)
 
-#contact input[type=checkbox]
-    display: none
-    &:checked + .contact__card
-        transform: rotateX(180deg)
-
-.contact__card
+.contact__form--name
+    height: 32px
+    width: 50%
     position: relative
-    transform-style: preserve-3d
-    transition: all 0.6s
-    height: 100%
-    width: 100%
-
-.contact__card--front, .contact__card--back
-    position: absolute
-    height: 100%
-    width: 100%
-    backface-visibility: hidden
-    border-radius: 2px
-    padding: 2.8rem 2rem
-
-.contact__card--front
-    background-image: url("http://i64.tinypic.com/wlu0wl.png")
-    color: #fff
-
-.contact__card--back
-    background-image: url("http://i67.tinypic.com/2qmkgwl.jpg")
-    background-position: 0% 30%
-    background-size: cover
-    transform: rotateX(180deg)
-
-
-.front__information
-    h3
-        font-weight: 100
-        font-size: 3rem
-        letter-spacing: 1px
-    p
-        font-weight: 100
-        font-size: 1.2rem
-        color: rgba(255, 255, 255, 0.6)
-
-.front__description
-    padding-top: 1.5rem
-    font-weight: 300
-    color: rgba(255, 255, 255, 0.8)
-    line-height: 1.5rem
-
-.front__contact
-    padding-top: 1.5rem
-    a
-        color: #B759F2
-        transition: color 0.5s ease-in-out
-        text-decoration: none
-        &:hover
-            color: #A152D4
-        &:last-child
-            margin-left: 2.8rem
-
-.front__links
-    display: flex
-    padding-top: 2rem
-    justify-content: space-between
-    align-items: center
-
-.front__links--ency
-    display: flex
-    align-items: center
-
-.ency__md
-    font-weight: 300
-    margin-left: 0.75rem
-    p
-        color: rgba(255, 255, 255, 0.9)
-    div
-        color: rgba(255, 255, 255, 0.4)
-    a
-        text-decoration: none
-        color: #B759F2
-        transition: color 0.5s ease-in-out
-        &:hover
-            color: #A152D4
-
-.front__links--social
-    display: flex
-    a
-        margin-left: 1.2rem
-
-.contact__card--back
-    p
-        font-weight: 300
-        color: #7E00D4
+    margin-bottom: 3.6rem
+    padding-right: 2.4rem
+    label
         position: absolute
-        bottom: 1.5rem
-        background-color: #FFF
-        padding: 0.375rem 0.75rem
-        span
-            font-weight: 500
-            font-size: 1.2rem
+        bottom: 0
+        left: 0
+        transform: translate3d(0,-13px,0) scale(1)
+        transition: transform 0.25s cubic-bezier(0.25,0.8,0.25,1)
+        transform-origin: left top
+
+.contact__form--email
+    height: 32px
+    width: 50%
+    position: relative
+    margin-bottom: 3.6rem
+    padding-left: 2.4rem
+    label
+        position: absolute
+        bottom: 0
+        left: 2.4rem
+        transform: translate3d(0,-13px,0) scale(1)
+        transition: transform 0.25s cubic-bezier(0.25,0.8,0.25,1)
+        transform-origin: left top
+
+.contact__form--msg
+    width: 100%
+    position: relative
+    margin-bottom: 2.4rem
+    textarea
+        width: 100%
+        height: 9.6rem
+        font-size: 14px
+        resize: vertical
+        border: 1px solid rgba(0, 0, 0, 0.12)
+        outline: 0
+        appearance: none
+        transition: all 0.25s ease-in
+        padding: 10px
+        background-color: #fafafa
+        box-shadow: inset 0 1px 2px rgba(0,0,0,0.075)
+        color: rgba(0, 0, 0, 0.87)
+        &:focus
+            border-color: $light-pink
+            background-color: #fff
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.075),0 0 5px pink
+            ~ label
+                color: $dark-pink
+    label
+        position: absolute
+        top: 0
+        transform: translate3d(0,-25px,0)
+        transition: color 0.25s ease-in
+
+.contact__form--button
+    width: 100%
+    text-align: center
+    button
+        text-transform: uppercase
+        padding: 0.6rem 2.4rem
+        appearance: none
+        border: 0
+        background-color: $light-pink
+        color: #fafafa
+        font-size: 14px
+        letter-spacing: 2px
+        outline: 0
+        transition: background-color 0.25s ease-in-out
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+        &:active
+            background-color: $dark-pink
