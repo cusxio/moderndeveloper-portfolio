@@ -105,6 +105,13 @@
         transform: translate3d(0,-13px,0) scale(1)
         transition: transform 0.25s cubic-bezier(0.25,0.8,0.25,1)
         transform-origin: left top
+        &:active, &:focus
+            border-bottom: 2px solid $dark-pink
+        &:valid ~ label
+            transform: translate3d(0,-30px,0) scale(0.75)
+        &:focus ~ label
+            color: $dark-pink
+            transform: translate3d(0,-30px,0) scale(0.75)
 
 .contact__form--msg
     width: 100%
