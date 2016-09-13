@@ -3,13 +3,15 @@
 //===================
 
 nav
-    width: 100%
     position: fixed
     top: 0
+    left: 0
+    right: 0
     font-size: ms(0)
     height: 4.8rem
     background-color: #fff
     display: flex
+    align-items: flex-start
     padding: 0 2.4rem
     border-bottom: 1px solid rgba(0,0,0,0.14)
     z-index: 99
@@ -18,10 +20,12 @@ nav
         box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06),0 4px 5px 0 rgba(0,0,0,0.06),0 1px 10px 0 rgba(0,0,0,0.08)
 
 .nav__user
-    display: flex
-    align-items: center
-    justify-content: center
-    flex: 1 0 20%
+    // display: flex
+    // align-items: center
+    // justify-content: center
+    // flex: 1 0 20%
+    position: relative
+    top: 0.9rem
 
 .nav__user--logo
     user-select: none
@@ -42,19 +46,24 @@ nav
     font-weight: 800
 
 .nav__links
-    flex: 1 0 50%
-    list-style: none
-    display: flex
-    align-items: center
+    // flex: 1 0 50%
+    // list-style: none
+    // align-items: center
+    position: relative
+    flex: 1
+    text-align: right
+    top: 1.8rem
+    ul
+        display: inline-flex
+        list-style-type: none
     li
-        display: flex
+        margin-left: 32px
+        text-transform: uppercase
+        font-size: 14px
     a
-        margin: 0 1.2rem
         text-decoration: none
         color: rgba(0,0,0,0.54)
         font-weight: 400
-        text-transform: uppercase
-        font-size: 14px
         transition: color 0.25s
         letter-spacing: 0.025rem
         &.nav-active
@@ -79,13 +88,12 @@ nav
 
 
 .nav__search
-    display: flex
-    flex: 1 0 30%
-    justify-content: flex-end
+    position: relative
+    padding-left: 2.4rem
 
 .nav__search--fields
     position: relative
-    top: 2rem
+    top: 1.75rem
     height: 32px
     label
         position: absolute
@@ -95,6 +103,8 @@ nav
         transition: transform 0.25s cubic-bezier(0.25,0.8,0.25,1)
         color: rgba(0,0,0,0.26)
         transform-origin: left top
+        text-transform: uppercase
+        font-size: 14px
     input[type=text]
         z-index: 1
         position: relative
@@ -114,9 +124,9 @@ nav
     color: $dark-pink
     transform: translate3d(0,-30px,0) scale(0.75)
 
-.nav__search--icon
-    display: flex
-    align-items: center
+.nav__icon
+    position: relative
+    top: 1.525rem
     margin-left: 0.6rem
     font-size: 1.5rem
     color: rgba(0,0,0,0.54)
