@@ -33,9 +33,15 @@
                 <div class="nav__search--icon">
                     <input type="checkbox" id="modal">
                     <label for="modal"><i class="ion ion-android-search"></i></label>
-                    <div class="modal__container">
-                        <div>Search Temporarily Disabled</div>
-                        <label for="modal"><i class="ion ion-close-round"></i></label>
+                    <div class="modal">
+                        <div class="modal__notify">
+                            <div>
+                                <p>Search is temporarily disabled.</p>
+                                <p>Please try again later.</p>
+                                <p>Sorry for any inconvenience caused.</p>
+                                <label for="modal">CLOSE</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -554,8 +560,7 @@
                     <label for="contact__name">Name</label>
                 </div>
                 <div class="contact__form--email">
-                    <input type="email" id="contact__email" required>
-                    <div class="email__invalid">Please insert a valid email.</div>
+                    <input type="text" id="contact__email" required>
                     <label for="contact__email">Email</label>
                 </div>
                 <div class="contact__form--msg">
