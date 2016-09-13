@@ -17,19 +17,12 @@ $gray: #4C4A4A
 $dark-pink: #CF4C95
 $light-pink: #ED68B1
 
-//===================
-// DIVIDER
-//===================
-
-.divider
-    border-bottom: 1px solid #E5E4E4
-    margin: 2.4rem 0
-
-:target::before
-    content: ""
-    display: block
-    height: 7.2rem
-    margin: -7.2rem 0 0
+#about, #projects, #skills, #contact
+    &:target::before
+        content: ""
+        display: block
+        height: 7.2rem
+        margin: -7.2rem 0 0
 
 
 @import 'components/navigation.sass'

@@ -5,40 +5,45 @@
 footer
     border-top: 1px solid rgba(0,0,0,0.14)
     font-size: 14px
-    .footer__container
-        max-width: 60rem
-        margin: 0 auto
-        padding: 30px 120px
-        display: flex
-        a
-            color: rgba(0, 0, 0, 0.54)
-            text-decoration: none
-            transition: color 0.25s ease-in
-            &:hover
-                color: $dark-pink
 
-    .footer__social, .footer__info
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        div:first-child
-            margin-bottom: 1.2rem
-            span
-                color: $dark-pink
-                padding: 0.2rem
-    .footer__social
-        flex: 1 0 50%
-        i
-            margin-right: 0.6rem
-            font-size: 1.4rem
-            color: rgba(0, 0, 0, 0.54)
-            vertical-align: middle
-    .footer__info
-        text-align: right
-        color: rgba(0, 0, 0, 0.87)
-        align-items: flex-end
-        flex: 1 0 50%
-        span:nth-child(1)
-            font-weight: 300
-        span:nth-child(2)
-            font-weight: 500
+.footer__container
+    max-width: 60rem
+    margin: 0 auto
+    padding: 30px 120px
+    display: flex
+    a
+        color: rgba(0, 0, 0, 0.54)
+        text-decoration: none
+        transition: color 0.25s ease-in
+        &:hover
+            color: $dark-pink
+
+.footer__social, .footer__info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    div:first-child
+        span
+            color: $dark-pink
+            padding: 0.2rem
+
+.footer__social
+    flex: 1 0 50%
+    i
+        margin-right: 0.6rem
+        font-size: 1.4rem
+        color: rgba(0, 0, 0, 0.54)
+        vertical-align: middle
+
+.footer__info
+    text-align: right
+    color: rgba(0, 0, 0, 0.87)
+    align-items: flex-end
+    flex: 1 0 50%
+    span:nth-child(1)
+        font-weight: 300
+    span:nth-child(2)
+        font-weight: 500
+
+.footer__info--source
+    padding: 0.6rem 0

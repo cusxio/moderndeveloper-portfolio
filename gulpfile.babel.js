@@ -105,3 +105,10 @@ gulp.task('build', ['clean'], (cb) => {
         cb
     );
 });
+
+gulp.task('deploy', [], () => {
+    return $.surge({
+        project: './dist',
+        domain: 'md-portfolio.surge.sh',
+    });
+});
