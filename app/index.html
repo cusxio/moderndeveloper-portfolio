@@ -11,25 +11,29 @@
 </head>
 
 <body>
+    <input type="checkbox" id="backdrop">
+    <label for="backdrop" class="backdrop__fixed"></label>
     <div class="container">
-        <nav class="nav">
-            <div class="nav__hamburger">
-                <div class="nav__hamburger--layer -top"></div>
-                <div class="nav__hamburger--layer -mid"></div>
-                <div class="nav__hamburger--layer -bottom"></div>
-            </div>
-            <div class="nav__user">
+        <header class="nav">
+            <label class="nav__hamburger" for="backdrop">
+                <div>
+                    <div class="nav__hamburger--layer -top"></div>
+                    <div class="nav__hamburger--layer -mid"></div>
+                    <div class="nav__hamburger--layer -bottom"></div>
+                </div>
+            </label>
+            <a href="/" class="nav__user">
                 <span class="nav__user--first">J.</span>
                 <span class="nav__user--last">Chan</span>
-            </div>
-            <div class="nav__links">
+            </a>
+            <nav class="nav__links">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
+            </nav>
             <div class="nav__search">
                 <div class="nav__search--fields">
                     <!-- htmlmin:ignore -->
@@ -52,7 +56,49 @@
                     </div>
                 </div>
             </div>
-        </nav>
+        </header>
+        <div class="drawer">
+            <div class="drawer__panel">
+                <div class="drawer__panel--drawer-header">
+                    <div class="drawer-header">
+                        <span class="drawer-header__first">J.</span>
+                        <span class="drawer-header__last">Chan</span>
+                    </div>
+                </div>
+                <nav class="drawer__panel--drawer-nav">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li>
+                            <input type="checkbox" id="drawer-nav__projects">
+                            <label for="drawer-nav__projects">Projects</label>
+                            <ul>
+                                <li>
+                                    <label for="">Button Web Component</label>
+                                </li>
+                                <li>
+                                    <label for="">Sidebar Component</label>
+                                </li>
+                                <li>
+                                    <label for="">Forms and Inputs</label>
+                                </li>
+                                <li>
+                                    <label for="">Calculator</label>
+                                </li>
+                                <li>
+                                    <label for="">Product Listing Page</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="drawer__panel--footer">
+                    <div>&copy; 2016 <span>J</span>.<span>CHAN</span>. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
         <section id="landing">
             <div class="landing__hello">Hello, I'm</div>
             <div class="landing__name">Jonathan</div>

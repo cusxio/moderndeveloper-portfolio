@@ -1,0 +1,103 @@
+//===================
+// DRAWER
+//===================
+
+.drawer
+    position: fixed
+    bottom: 0
+    top: 0
+    background-color: #fff
+    max-width: 320px
+    width: calc(100% - 56px)
+    border-right: 1px solid rgba(0,0,0,0.14)
+    z-index: 100
+    transform: translateX(-100%)
+    display: block
+    overflow-x: hidden
+    will-change: transform
+    transition: transform 0.25s cubic-bezier(0,0,0.2,1)
+
+.drawer-is-opened
+    .drawer
+        transition: transform 0.25s cubic-bezier(0.4,0,1,1)
+
+.drawer__panel
+    display: flex
+    flex-direction: column
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+.drawer__panel--drawer-header
+    height: 4.8rem
+    border-bottom: 1px solid rgba(0,0,0,0.14)
+    color: rgba(0,0,0,0.54)
+
+.drawer-header
+    position: relative
+    top: 1.61875rem
+    left: 1.2rem
+    text-transform: uppercase
+    font-size: ms(1)
+    letter-spacing: 0.025rem
+
+.drawer-header__first
+    font-weight: 300
+
+.drawer-header__last
+    font-weight: 500
+
+.drawer__panel--drawer-nav
+    a
+        text-decoration: none
+    label[for=drawer-nav__projects]
+        cursor: pointer
+    > ul
+        list-style: none
+        > li
+            a, label[for=drawer-nav__projects]
+                display: flex
+                height: 3rem
+                align-items: center
+                margin-left: 1.2rem
+                font-size: 14px
+                color: rgba(0,0,0,0.87)
+                font-weight: 700
+                user-select: none
+    ul li ul label
+        cursor: pointer
+        display: block
+        margin-left: 2.8rem
+        font-size: 14px
+        color: rgba(0,0,0,0.54)
+        margin-bottom: 10px
+        margin-top: 10px
+    ul li ul
+        height: 0
+        overflow: hidden
+        transition: height 0.2s cubic-bezier(0.25, 0.45, 0.65, 1)
+    input[type=checkbox]
+        display: none
+        &:checked
+            ~ ul
+                height: 9.6875rem
+
+.drawer__panel--footer
+    display: flex
+    height: 4.8rem
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    border-top: 1px solid rgba(0,0,0,0.14)
+    align-items: center
+    > div
+        margin-left: 1.2rem
+        font-size: 14px
+        span
+            &:first-child
+                font-weight: 300
+            &:nth-child(2)
+                font-weight: 500

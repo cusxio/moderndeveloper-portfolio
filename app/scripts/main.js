@@ -18,10 +18,18 @@
 
         window.addEventListener('scroll', function () {
             if (document.body.scrollTop > 0) {
-                document.querySelector('nav').classList.add('body-is-scrolled');
+                document.querySelector('.nav').classList.add('body-is-scrolled');
             } else {
-                document.querySelector('nav').classList.remove('body-is-scrolled');
+                document.querySelector('.nav').classList.remove('body-is-scrolled');
             }
+        });
+
+        const mobileNavToggle = document.querySelectorAll('label[for=backdrop]');
+
+        [].forEach.call(mobileNavToggle, function (el) {
+            el.addEventListener('click', function () {
+                document.querySelector('body').classList.toggle('drawer-is-opened');
+            });
         });
     });
 })(document);

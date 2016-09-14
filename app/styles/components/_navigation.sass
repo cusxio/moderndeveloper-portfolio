@@ -2,7 +2,7 @@
 // NAVIGATION
 //===================
 
-nav
+.nav
     position: fixed
     top: 0
     left: 0
@@ -26,6 +26,7 @@ nav
     text-transform: uppercase
     font-size: ms(1)
     letter-spacing: 0.025rem
+    text-decoration: none
 
 .nav__user--first
     font-weight: 300
@@ -121,13 +122,14 @@ nav
         user-select: none
 
 .nav__hamburger
-    opacity: 0
     position: relative
     top: 1.92375rem
     width: 40px
     cursor: pointer
     transform: translate3d(0, 0, 0)
     transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98)
+    > div
+        display: none
 
 .nav__hamburger--layer
     background-color: rgba(0,0,0,0.54)
