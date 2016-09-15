@@ -4,11 +4,13 @@
 
 .project__content--carousel
     position: relative
+    height: 80%
+    width: 100%
     input[type=radio]
         display: none
         &:checked
             + .carousel__item
-                display: block
+                display: flex
 
 .project__content--carousel
     input[type=radio]:nth-of-type(1):checked ~ .carousel__controls .carousel__control--one,
@@ -24,12 +26,21 @@
 
 .carousel__item
     display: none
-    padding: 0 20% 1.2rem
+    padding: 0 5% 1.2rem
+    width: 100%
+    // Impt Line
+    height: 500px
+    align-items: center
+    justify-content: center
+    iframe
+        width: 80%
+        height: 100%
 
 .carousel__item--screenshot
+    height: 100%
     img
-        width: 100%
-        height: auto
+        width: auto
+        height: 100%
         border-radius: 3px
 
 .carousel__item--demo
@@ -49,12 +60,14 @@
     color: $light-pink
 
 .carousel__control--prev
-    left: 10%
+    left: 5%
 
 .carousel__control--next
-    right: 10%
+    right: 5%
 
 .carousel__indicators
+    position: absolute
+    bottom: 0
     user-select: none
     width: 100%
     text-align: center
