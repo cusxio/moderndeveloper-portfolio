@@ -17,7 +17,8 @@
         });
 
         window.addEventListener('scroll', function () {
-            if (document.body.scrollTop > 0) {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+            if (scrollTop > 0) {
                 document.querySelector('.nav').classList.add('body-is-scrolled');
             } else {
                 document.querySelector('.nav').classList.remove('body-is-scrolled');
