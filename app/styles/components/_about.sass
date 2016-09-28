@@ -31,24 +31,32 @@
             z-index: -1
 
 .about__intro
-    width: 80%
+    width: 100%
+    @include tablet
+        width: 80%
 
 .about__intro--hey
     margin: 0 0 2.4rem
 
 .about__intro--do
-    font-size: ms(4)
-    line-height: 3.6rem
+    line-height: 2.4rem
     margin-bottom: 2.4rem
-    font-weight: 100
+    font-weight: 300
+    @include tablet
+        font-size: ms(4)
+        line-height: 3.6rem
+        font-weight: 100
     span
         font-weight: 500
 
 .about__intro--contact
-    font-size: ms(4)
-    line-height: 3.6rem
+    line-height: 2.4rem
     margin-bottom: 9.6rem
-    font-weight: 100
+    font-weight: 300
+    @include tablet
+        font-size: ms(4)
+        line-height: 3.6rem
+        font-weight: 100
     span
         font-weight: 500
     a
