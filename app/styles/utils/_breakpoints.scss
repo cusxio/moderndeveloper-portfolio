@@ -1,11 +1,9 @@
-// Desktop: 1024px
-// Tablet: 600px
-// Mobile: 360px
-
 $breakpoints: (
-    desktop: 1024px,
-    tablet: 600px,
-    mobile: 360px
+    desktophd: 1200px,
+    desktop: 1000px,
+    tablet: 750px,
+    phablet: 550px,
+    mobile: 400px
 );
 
 @mixin mq($args...) {
@@ -30,6 +28,12 @@ $breakpoints: (
 }
 
 
+@mixin desktophd {
+    @include mq($min-width: map-get($breakpoints, desktophd)) {
+        @content
+    }
+};
+
 @mixin desktop {
     @include mq($min-width: map-get($breakpoints, desktop)) {
         @content
@@ -42,6 +46,12 @@ $breakpoints: (
     }
 };
 
+
+@mixin phablet {
+    @include mq($min-width: map-get($breakpoints, phablet)) {
+        @content
+    }
+};
 
 @mixin mobile {
     @include mq($min-width: map-get($breakpoints, mobile)) {
