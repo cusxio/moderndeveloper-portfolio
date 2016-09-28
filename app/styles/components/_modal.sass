@@ -4,24 +4,26 @@
 
 .modal
     position: fixed
-    display: none
+    display: flex
     align-items: center
     justify-content: center
-    top: 4.8rem
+    top: 0
     bottom: 0
     left: 0
     right: 0
-    background-color: rgba(230, 230, 230, 0.5)
+    background-color: rgba(33, 33, 33, 0.48)
+    opacity: 0
+    visibility: hidden
+    transition: opacity 0.5s, visibility 0s linear 0.55s
 
 .modal__notify
     font-size: ms(0)
     background-color: #fff
     padding: 38px
     box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2)
-    animation-duration: 0.5s
-    animation-fill-mode: both
-    animation-name: fadeIn
-    animation-delay: 0.05s
+    will-change: transform
+    transform: translate3d(0, -200%,0)
+    transition: transform 0.5s ease-in-out
     div
         display: flex
         flex-direction: column
@@ -47,13 +49,10 @@
             background-color: rgba(158,158,158,.2)
 
 .nav__icon
-    input[type=checkbox]:checked ~ .modal
-        display: flex
-
-@keyframes fadeIn
-    from
-        transform: translate3d(0,-50%,0)
-        opacity: 0
-    to
-        transform: none
-        opacity: 1
+    input[type=checkbox]:checked
+        ~ .modal
+            opacity: 1
+            visibility: visible
+            transition: opacity 0.5s
+        ~ .modal .modal__notify
+            transform: translate3d(0,0,0)
