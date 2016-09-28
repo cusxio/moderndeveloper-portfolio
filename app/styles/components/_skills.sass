@@ -5,10 +5,10 @@
 #skills
     max-width: 60rem
     margin: 0 auto
-    padding: 0 2.4rem
 
 .skills__title
     margin-bottom: 3.6rem
+    padding: 0 2.4rem
     h1
         margin: 0 0 1.2rem
         text-align: right
@@ -31,14 +31,17 @@
             z-index: -1
 
 .skills__intro
-    width: 80%
+    @include tablet
+        width: 80%
     margin: 0 auto 2.4rem
     h1
         text-align: center
         font-weight: 700
 
 .skills__intro--p
-    width: 60%
+    width: 85%
+    @include tablet
+        width: 60%
     margin: 0 auto
     text-align: center
     color: rgba(0, 0, 0, 0.54)
@@ -46,4 +49,4 @@
 
 .skills__graphs
     width: 100%
-    margin: 0 auto 12rem
+    margin: 0 auto 3.6rem

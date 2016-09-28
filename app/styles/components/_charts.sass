@@ -5,7 +5,10 @@
 .skills__graphs--linear
     color: #fff
     display: flex
-    width: 70%
+    width: 85%
+    font-weight: 700
+    @include tablet
+        width: 70%
     height: 1.8rem
     margin: 0 auto 3.6rem
 
@@ -15,7 +18,7 @@
     align-items: center
     justify-content: flex-start
     width: 70%
-    background-color: #FF4459
+    background-color: #b39ddb
     border-top-left-radius: 3px
     border-bottom-left-radius: 3px
 
@@ -25,7 +28,7 @@
     align-items: center
     justify-content: flex-end
     width: 30%
-    background-color: #376EEE
+    background-color: #ef9a9a
     border-top-right-radius: 3px
     border-bottom-right-radius: 3px
 
@@ -38,152 +41,216 @@
     justify-content: space-between
     flex-wrap: wrap
 
-.bar__frontend, .bar__backend, .bar__other
-    width: 40%
-    height: 185px
-    table
-        position: relative
-        width: 100%
-        height: 184px
-        caption
-            position: relative
-            caption-side: top
-            top: -2.4rem
-            width: 100%
-            font-weight: 500
-        tr, th, td
-            position: absolute
-            bottom: 0
-            width: 20%
-        tr
-            height: 180px
-            border-bottom: 1px solid silver
-            &:nth-child(1)
-                left: 0
-                td
-            &:nth-child(2)
-                left: 20%
-                td
-            &:nth-child(3)
-                left: 40%
-                td
-            &:nth-child(4)
-                left: 60%
-                td
-            &:nth-child(5)
-                left: 80%
-                td
-        th
-            bottom: 5%
-            text-align: left
-            transform: rotateZ(40deg) translateX(3rem)
-            font-weight: 400
-            color: rgba(0,0,0,0.8)
-            font-size: ms(-1)
-        td
-            z-index: 50
-            width: 50%
-            left: 25%
-            border-top-left-radius: 3px
-            border-top-right-radius: 3px
-
-.bar__frontend--yaxis, .bar__backend--yaxis, .bar__other--yaxis
-    position: relative
-    top: -184px
-    margin-bottom: -184px
+.bar__container
+    margin: 0 auto 9.6rem
+    max-width: 28rem
     width: 100%
-    height: 184px
-    font-size: ms(-1)
-    color: rgba(0,0,0,0.8)
-    > div
-        position: relative
-        height: 45px
-        p
-            width: 200px
-            text-align: right
-            position: absolute
-            left: -13rem
-            top: 0
+    height: 250px
+    display: flex
+    font-size: 14px
+    position: relative
+    @include tablet
+        width: 50%
+    &::before
+        position: absolute
+        top: -3rem
+        left: 20px
+        text-align: center
+        width: 100%
+        font-weight: 500
 
-.bar__frontend
-    caption
-        color: #FF3550
-    table
-        tr
-            &:nth-child(1)
-                td
-                    height: 100%
-                    background-color: #FFA733
-            &:nth-child(2)
-                td
-                    height: 50%
-                    background-color: #00BEF2
-            &:nth-child(3)
-                td
-                    height: 75%
-                    background-color: #00D717
-            &:nth-child(4)
-                td
-                    height: 25%
-                    background-color: #FF80B0
-            &:nth-child(5)
-                td
-                    height: 50%
-                    background-color: #F3E200
+.bar__container.-frontend
+    @include tablet
+        padding-right: 1.2rem
+    &::before
+        content: 'Frontend Development'
+        color: #b39ddb
 
-.bar__backend
-    caption
-        color: #376EEE
-    table
-        tr
-            &:nth-child(1)
-                td
-                    height: 50%
-                    background-color: #FFA733
-            &:nth-child(2)
-                td
-                    height: 100%
-                    background-color: #00BEF2
-            &:nth-child(3)
-                td
-                    height: 50%
-                    background-color: #00D717
-            &:nth-child(4)
-                td
-                    height: 25%
-                    background-color: #FF80B0
-            &:nth-child(5)
-                td
-                    height: 50%
-                    background-color: #F3E200
+.bar__container.-backend
+    @include tablet
+        padding-left: 1.2rem
+    &::before
+        content: 'Backend Development'
+        color: #ef9a9a
 
-.bar__other
-    margin-top: 9.6rem
-    margin-left: 50%
-    transform: translateX(-50%)
-    caption
-        color: #2C2C2C
-    table
-        tr
-            &:nth-child(1)
-                td
-                    height: 75%
-                    background-color: #82D250
-            &:nth-child(2)
-                td
-                    height: 100%
-                    background-color: #00CC93
-            &:nth-child(3)
-                td
-                    height: 50%
-                    background-color: #00C5F4
-            &:nth-child(4)
-                td
-                    height: 100%
-                    background-color: #879DFF
-            &:nth-child(5)
-                td
-                    height: 50%
-                    background-color: #E092FF
-        th
-            transform: rotate(45deg) translate(2.5rem, 1.2rem)
+.bar__container.-other
+    &::before
+        content: 'Other Skills'
+        color: #2c2c2c
+
+.bar__yaxis
+    height: 100%
+
+.bar__yaxis--label
+    height: 25%
+    position: relative
+    top: -9px
+    left: -5px
+    text-align: right
+    color: rgba(0, 0, 0, 0.54)
+
+.bar__paper
+    position: relative
+    display: flex
+    flex-grow: 1
+    border-bottom: 1px solid silver
+    height: 100%
+
+.bar__paper--lines
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+.bar__paper--line
+    position: relative
+    z-index: -1
+    height: 25%
+    border-top: 1px dashed silver
+
+.bar__paper--plot
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAP0lEQVQoU43MuQ0AIAwEQVzW9R9cWSAjgXj8bTxaaYVIdsmcIgASwoV05sITufBFJrTQBz10wQhtmKEJK0jhAAIcJ1+v3onXAAAAAElFTkSuQmCC) repeat
+    width: 20%
+    height: 100%
+    margin-right: 0.6rem
+    border-radius: 3px
+
+.plot__inner
+    border-radius: 3px
+    position: relative
+    width: 100%
+    max-width: 2rem
+    margin: 0 auto
+
+.bar__xaxis--label
+    position: absolute
+    text-align: right
+    bottom: - 3.8rem
+    left: -60px
+    transform: rotate(-60deg)
+    width: 100px
+    white-space: nowrap
+
+.bar__paper--plot.-frontend
+    &:nth-child(2)
+        margin-left: 0.6rem
+        .plot__inner
+            height: 75%
+            background-color: #80deea
+            border: 1px solid #00bcd4
+        .bar__xaxis--label
+            color: #00bcd4
+    &:nth-child(3)
+        .plot__inner
+            height: 100%
+            background-color: #ffe082
+            border: 1px solid #ffc107
+        .bar__xaxis--label
+            color: #ffc107
+    &:nth-child(4)
+        .plot__inner
+            height: 25%
+            background-color: #ce93d8
+            border: 1px solid #9c27b0
+        .bar__xaxis--label
+            color: #9c27b0
+    &:nth-child(5)
+        .plot__inner
+            height: 50%
+            background-color: #ef9a9a
+            border: 1px solid #f44336
+        .bar__xaxis--label
+            color: #f44336
+    &:nth-child(6)
+        .plot__inner
+            height: 75%
+            background-color: #a5d6a7
+            border: 1px solid #4caf50
+        .bar__xaxis--label
+            color: #4caf50
+
+.bar__paper--plot.-backend
+    &:nth-child(2)
+        margin-left: 0.6rem
+        .plot__inner
+            height: 100%
+            background-color: #a5d6a7
+            border: 1px solid #4caf50
+        .bar__xaxis--label
+            color: #4caf50
+    &:nth-child(3)
+        .plot__inner
+            height: 25%
+            background-color: #ef9a9a
+            border: 1px solid #f44336
+        .bar__xaxis--label
+            color: #f44336
+    &:nth-child(4)
+        .plot__inner
+            height: 50%
+            background-color: #ce93d8
+            border: 1px solid #9c27b0
+        .bar__xaxis--label
+            color: #9c27b0
+    &:nth-child(5)
+        .plot__inner
+            height: 50%
+            background-color: #ffe082
+            border: 1px solid #ffc107
+        .bar__xaxis--label
+            color: #ffc107
+    &:nth-child(6)
+        .plot__inner
+            height: 25%
+            background-color: #80deea
+            border: 1px solid #00bcd4
+        .bar__xaxis--label
+            color: #00bcd4
+
+.bar__container.-other
+    .bar__xaxis--label
+        width: 200px
+        left: -135px
+        bottom: -6.4rem
+
+.bar__paper--plot.-other
+    &:nth-child(2)
+        margin-left: 0.6rem
+        .plot__inner
+            height: 75%
+            background-color: #a5d6a7
+            border: 1px solid #4caf50
+        .bar__xaxis--label
+            color: #4caf50
+    &:nth-child(3)
+        .plot__inner
+            height: 100%
+            background-color: #80cbc4
+            border: 1px solid #009688
+        .bar__xaxis--label
+            color: #009688
+    &:nth-child(4)
+        .plot__inner
+            height: 50%
+            background-color: #81d4fa
+            border: 1px solid #03a9f4
+        .bar__xaxis--label
+            color: #03a9f4
+    &:nth-child(5)
+        .plot__inner
+            height: 100%
+            background-color: #b39ddb
+            border: 1px solid #673ab7
+        .bar__xaxis--label
+            color: #673ab7
+    &:nth-child(6)
+        .plot__inner
+            height: 50%
+            background-color: #9fa8da
+            border: 1px solid #3f51b5
+        .bar__xaxis--label
+            color: #3f51b5
