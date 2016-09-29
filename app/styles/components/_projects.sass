@@ -1,13 +1,14 @@
 //===================
 // PROJECTS
 //===================
+
 #projects
     max-width: 60rem
     margin: 0 auto
-    padding: 0 2.4rem
 
 .projects__title
     margin-bottom: 3.6rem
+    padding: 0 2.4rem
     h1
         margin: 0 0 1.2rem
         text-align: right
@@ -31,10 +32,12 @@
 
 
 .projects__intro
-    width: 70%
+    padding: 0 2.4rem
     color: rgba(0, 0, 0, 0.54)
     line-height: 2.4rem
     margin: 0 auto 4.8rem
+    @include tablet
+        width: 70%
     a
         text-decoration: none
         color: $light-pink
@@ -45,11 +48,17 @@
 .projects__showcase
     display: flex
     margin-bottom: 9.6rem
+    padding: 0 0.6rem
+    @include tablet
+        padding: 0 2.4rem
     input[type=radio]
         display: none
 
 .projects__showcase--nav
     width: 25%
+    display: none
+    @include tablet
+        display: initial
     ul
         list-style: none
     li
@@ -79,28 +88,72 @@
     box-shadow: inset 2px 0px $light-pink
 
 .projects__showcase--project
-    padding: 1.2rem
-    width: 75%
-    background-color: #f9f9f9
-    border: 1px solid #e5e5e5
+    width: 100%
+    background-color: #fff
+    border: 2px solid #e5e5e5
     border-radius: 3px
-    > div
-        display: none
-        height: 40rem
+    box-shadow: 0 2px 10px 0 #E5E5E5
+    @include tablet
+        box-shadow: none
+        border-width: 1px
+    @include tablet
+        width: 75%
+        padding: 1.2rem
+        background-color: #f9f9f9
+    > div:nth-child(even)
+        max-height: 0
+        overflow: hidden
         width: 100%
+        border-bottom: 1px solid #E8E8E8
+        transition: max-height 0.5s ease
+        will-change: max-height
+        @include tablet
+            display: none
+            border-bottom: 0
+            max-height: inherit
+    > div:nth-child(odd)
+        background-color: #FAFAFA
+        color: #C8C8C8
+        border-bottom: 1px solid #E8E8E8
+        label
+            cursor: pointer
+            padding: 1.2rem
+            display: flex
+            width: 100%
+            justify-content: space-between
+    > div:nth-last-child(2)
+        border-bottom: 0
+    > div:nth-last-child(1)
+        border-bottom: 0
+
+#project-1:checked ~ .projects__showcase--project > div:nth-child(2),
+#project-2:checked ~ .projects__showcase--project > div:nth-child(4),
+#project-3:checked ~ .projects__showcase--project > div:nth-child(6),
+#project-4:checked ~ .projects__showcase--project > div:nth-child(8),
+#project-5:checked ~ .projects__showcase--project > div:nth-child(10),
+    max-height: 60rem
+    @include tablet
+        display: block
 
 #project-1:checked ~ .projects__showcase--project > div:nth-child(1),
-#project-2:checked ~ .projects__showcase--project > div:nth-child(2),
-#project-3:checked ~ .projects__showcase--project > div:nth-child(3),
-#project-4:checked ~ .projects__showcase--project > div:nth-child(4),
-#project-5:checked ~ .projects__showcase--project > div:nth-child(5),
-    display: block
+#project-2:checked ~ .projects__showcase--project > div:nth-child(3),
+#project-3:checked ~ .projects__showcase--project > div:nth-child(5),
+#project-4:checked ~ .projects__showcase--project > div:nth-child(7),
+#project-5:checked ~ .projects__showcase--project > div:nth-child(9),
+    color: #555555
+    font-weight: 500
+    border-bottom: 1px solid #D7D7D7
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.04)
+    margin-bottom: 1.2rem
 
 .project__content--information
     display: flex
     justify-content: flex-end
     flex-direction: column
     height: 20%
+    padding: 0 1.2rem 1.2rem
+    @include tablet
+        padding-bottom: 0
 
 .information__tech
     color: rgba(0, 0, 0, 0.54)
@@ -131,3 +184,76 @@
             font-size: 1.2rem
             vertical-align: top
             margin-right: 0.3rem
+
+//===================
+// ACCORDION
+//===================
+
+.accordion
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include tablet
+        display: none
+
+.accordion__arrow
+    position: relative
+    right: 8px
+    top: 3px
+    &::before, &::after
+        content: ""
+        position: absolute
+        background-color: #C8C8C8
+        width: 2px
+        height: 9px
+    &::before
+        transform: translate(3px, 0) rotate(45deg)
+        transition: all 0.25s ease-in-out
+    &::after
+        transform: translate(-3px, 0) rotate(-45deg)
+        transition: all 0.25s ease-in-out
+
+#project-1:checked ~ .projects__showcase--project > div:nth-child(1) label
+    i
+        &::before
+            background-color: #555555
+            transform: translate(-3px, 0) rotate(45deg)
+        &::after
+            background-color: #555555
+            transform: translate(3px, 0) rotate(-45deg)
+
+#project-2:checked ~ .projects__showcase--project > div:nth-child(3) label
+    i
+        &::before
+            background-color: #555555
+            transform: translate(-3px, 0) rotate(45deg)
+        &::after
+            background-color: #555555
+            transform: translate(3px, 0) rotate(-45deg)
+
+#project-3:checked ~ .projects__showcase--project > div:nth-child(5) label
+    i
+        &::before
+            background-color: #555555
+            transform: translate(-3px, 0) rotate(45deg)
+        &::after
+            background-color: #555555
+            transform: translate(3px, 0) rotate(-45deg)
+
+#project-4:checked ~ .projects__showcase--project > div:nth-child(7) label
+    i
+        &::before
+            background-color: #555555
+            transform: translate(-3px, 0) rotate(45deg)
+        &::after
+            background-color: #555555
+            transform: translate(3px, 0) rotate(-45deg)
+
+#project-5:checked ~ .projects__showcase--project > div:nth-child(9) label
+    i
+        &::before
+            background-color: #555555
+            transform: translate(-3px, 0) rotate(45deg)
+        &::after
+            background-color: #555555
+            transform: translate(3px, 0) rotate(-45deg)
