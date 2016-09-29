@@ -50,6 +50,16 @@ gulp.task('scripts', () => {
     .pipe($.if(PRODUCTION, gulp.dest('dist/scripts')));
 });
 
+gulp.task('images', () => {
+    gulp.src('app/images/**/*')
+        .pipe($.imagemin({
+            progressive: true,
+            interlaced: true,
+        }))
+        .pipe(gulp.dest('dist/images'))
+        .pipe($.size({ title: 'Images' }));
+});
+
 gulp.task('development', ['scripts', 'styles'], () => {
     bs.init({
         server: ['.tmp', 'app'],
@@ -89,6 +99,7 @@ gulp.task('clean', () => {
 gulp.task('copy', () => {
     return gulp.src([
         'app/*',
+        '!app/images',
         '!app/*.sass',
         '!app/*.html',
     ], {
@@ -102,6 +113,7 @@ gulp.task('build', ['clean'], (cb) => {
     runSequence(
         'styles',
         ['html', 'scripts', 'copy'],
+        'images',
         cb
     );
 });
@@ -109,6 +121,6 @@ gulp.task('build', ['clean'], (cb) => {
 gulp.task('deploy', [], () => {
     return $.surge({
         project: './dist',
-        domain: 'md-portfolio.surge.sh',
+        domain: 'https://md-portfolio.surge.sh',
     });
 });
