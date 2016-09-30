@@ -133,6 +133,7 @@
                 <input type="radio" name="projects" id="project-3">
                 <input type="radio" name="projects" id="project-4">
                 <input type="radio" name="projects" id="project-5">
+                <input type="radio" name="projects" id="project-6">
                 <div class="projects__showcase--nav">
                     <ul>
                         <li>
@@ -149,6 +150,9 @@
                         </li>
                         <li>
                             <label for="project-5">Product Listing Page</label>
+                        </li>
+                        <li>
+                            <label for="project-6">CSS Accordion</label>
                         </li>
                     </ul>
                 </div>
@@ -248,7 +252,7 @@
                             </div>
                             <input type="radio" name="project-2" id="p2i4">
                             <div class="carousel__item -sidebar">
-                                <div class="caoursel__item--demo -sidebar">
+                                <div class="carousel__item--demo -sidebar">
                                     <div class="sidebar__header">
                                         <div class="sidebar__header--overlay">
                                         </div>
@@ -513,6 +517,103 @@
                             <div class="information__links">
                                 <a target="_blank" href="http://moderndeveloper-css.surge.sh/six/"><i class="ion ion-link"></i>View Demo</a>
                                 <a target="_blank" href="https://github.com/cusxio/moderndeveloper-css/tree/master/project-assignment-6"><i class="ion ion-social-github"></i>Source</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <label for="project-6">CSS Accordion<i class="accordion__arrow"></i></label>
+                    </div>
+                    <div class="project__six">
+                        <div class="project__content--carousel">
+                            <input type="radio" name="project-6" id="p6i1" checked>
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="images/accordion.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-6" id="p6i2">
+                            <div class="carousel__item">
+                                <div class="carousel__item--screenshot">
+                                    <img src="images/accordion_2.png" alt="">
+                                </div>
+                            </div>
+                            <input type="radio" name="project-6" id="p6i3">
+                            <div class="carousel__item">
+                                <div class="carousel__item--caption">
+                                    Live Demo on the Next Slide !
+                                </div>
+                            </div>
+                            <input type="radio" name="project-6" id="p6i4">
+                            <div class="carousel__item -css-accordion">
+                                <div class="carousel__item--demo -css-accordion">
+                                    <input type="radio" id="css-accordion-1" name="css-accordion" checked>
+                                    <label for="css-accordion-1">Quote 1</label>
+                                    <div class="css-accordion__content">
+                                        <div class="css-accordion__content--quotes">
+                                            <blockquote>
+                                                We can only see a short distance ahead, but we can see plenty there that needs to be done.
+                                                <p>- Alan Turing</p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <input type="radio" id="css-accordion-2" name="css-accordion">
+                                    <label for="css-accordion-2">Quote 2</label>
+                                    <div class="css-accordion__content">
+                                        <div class="css-accordion__content--quotes">
+                                            <blockquote>
+                                                Don’t ever take a fence down until you know the reason why it was put up.
+                                                <p>- G. K. Chesterton</p>
+                                        </div>
+                                    </div>
+                                    <input type="radio" id="css-accordion-3" name="css-accordion">
+                                    <label for="css-accordion-3">Quote 3</label>
+                                    <div class="css-accordion__content">
+                                        <div class="css-accordion__content--quotes">
+                                            <blockquote>
+                                                If something's important enough, you should try. Even if you - the probable outcome is failure.
+                                                <p>- Elon Musk</p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <input type="radio" id="css-accordion-4" name="css-accordion">
+                                    <label for="css-accordion-4">Quote 4</label>
+                                    <div class="css-accordion__content">
+                                        <div class="css-accordion__content--quotes">
+                                            <blockquote>
+                                                The truest drive comes from doing what you love.
+                                                <p>- Peter Diamandis</p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel__controls">
+                                <label for="p6i4" class="carousel__control carousel__control--prev carousel__control--one"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p6i2" class="carousel__control carousel__control--next carousel__control--one"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <label for="p6i1" class="carousel__control carousel__control--prev carousel__control--two"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p6i3" class="carousel__control carousel__control--next carousel__control--two"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <label for="p6i2" class="carousel__control carousel__control--prev carousel__control--three"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p6i4" class="carousel__control carousel__control--next carousel__control--three"><i class="ion ion-ios-arrow-forward"></i></label>
+                                <label for="p6i3" class="carousel__control carousel__control--prev carousel__control--four"><i class="ion ion-ios-arrow-back"></i></label>
+                                <label for="p6i1" class="carousel__control carousel__control--next carousel__control--four"><i class="ion ion-ios-arrow-forward"></i></label>
+                            </div>
+                            <div class="carousel__indicators">
+                                <label for="p6i1"><i class="ion-record"></i></label>
+                                <label for="p6i2"><i class="ion-record"></i></label>
+                                <label for="p6i3"><i class="ion-record"></i></label>
+                                <label for="p6i4"><i class="ion-record"></i></label>
+                            </div>
+                        </div>
+                        <div class="project__content--information">
+                            <div class="information__tech">
+                                <span>Technologies: </span>HTML5, CSS3
+                            </div>
+                            <div class="information__description">
+                                An accordion created with HTML and pure CSS.
+                            </div>
+                            <div class="information__links">
+                                <a target="_blank" href="http://codepen.io/cusx/full/LRjmjO/"><i class="ion ion-link"></i>View Demo</a>
+                                <a target="_blank" href="http://codepen.io/cusx/pen/LRjmjO"><i class="ion ion-social-github"></i>Source</a>
                             </div>
                         </div>
                     </div>

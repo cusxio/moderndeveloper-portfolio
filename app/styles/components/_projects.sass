@@ -81,6 +81,7 @@
 #project-3:checked ~ .projects__showcase--nav ul li:nth-child(3) label,
 #project-4:checked ~ .projects__showcase--nav ul li:nth-child(4) label,
 #project-5:checked ~ .projects__showcase--nav ul li:nth-child(5) label,
+#project-6:checked ~ .projects__showcase--nav ul li:nth-child(6) label,
     color: $light-pink
     background-color: #f9f9f9
     border-top-left-radius: 0
@@ -131,6 +132,7 @@
 #project-3:checked ~ .projects__showcase--project > div:nth-child(6),
 #project-4:checked ~ .projects__showcase--project > div:nth-child(8),
 #project-5:checked ~ .projects__showcase--project > div:nth-child(10),
+#project-6:checked ~ .projects__showcase--project > div:nth-child(12),
     max-height: 60rem
     @include tablet
         display: block
@@ -140,6 +142,7 @@
 #project-3:checked ~ .projects__showcase--project > div:nth-child(5),
 #project-4:checked ~ .projects__showcase--project > div:nth-child(7),
 #project-5:checked ~ .projects__showcase--project > div:nth-child(9),
+#project-6:checked ~ .projects__showcase--project > div:nth-child(11),
     color: #555555
     font-weight: 500
     border-bottom: 1px solid #D7D7D7
@@ -250,6 +253,15 @@
             transform: translate(3px, 0) rotate(-45deg)
 
 #project-5:checked ~ .projects__showcase--project > div:nth-child(9) label
+    i
+        &::before
+            background-color: #555555
+            transform: translate(-3px, 0) rotate(45deg)
+        &::after
+            background-color: #555555
+            transform: translate(3px, 0) rotate(-45deg)
+
+#project-6:checked ~ .projects__showcase--project > div:nth-child(11) label
     i
         &::before
             background-color: #555555
