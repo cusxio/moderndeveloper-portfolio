@@ -8,9 +8,11 @@
 
 .projects__title
     margin-bottom: 3.6rem
-    padding: 0 2.4rem
+    padding: 0 1.2rem
+    @include tablet
+        padding: 0 2.4rem
     h1
-        margin: 0 0 1.2rem
+        margin: 1.2rem 0 1.2rem
         text-align: right
         font-weight: 300
         color: $light-pink
@@ -74,7 +76,7 @@
         background-color: #fff
         border: 1px solid #e5e5e5
         border-radius: 3px
-        transition: all 0.25s ease-in
+        transition: all 0.15s ease-in
 
 #project-1:checked ~ .projects__showcase--nav ul li:nth-child(1) label,
 #project-2:checked ~ .projects__showcase--nav ul li:nth-child(2) label,
