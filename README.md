@@ -4,7 +4,7 @@ For [moderndeveloper](https://moderndeveloper.com/) :zap:
 
 ## Live Demo
 
-[http://md-portfolio.surge.sh/]([http://md-portfolio.surge.sh/)
+[https://md-portfolio.surge.sh/]([https://md-portfolio.surge.sh/)
 
 ## Development
 
