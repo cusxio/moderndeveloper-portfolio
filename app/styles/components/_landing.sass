@@ -3,58 +3,58 @@
 //===================
 
 #landing
+    display: flex
     position: relative
+    flex-direction: column
+    align-items: center
+    justify-content: center
     max-width: 60rem
+    height: 100vh
     margin: 0 auto
     padding: 0 2.4rem
-    height: 100vh
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
 
 .landing__hello
-    font-size: ms(-1)
-    color: rgba(0, 0, 0, 0.54)
     margin-bottom: 1.2rem
+    color: rgba(0, 0, 0, 0.54)
+    font-size: ms(-1)
     letter-spacing: 2px
 
 .landing__name
-    color: rgba(0, 0, 0, 0.54)
-    font-size: ms(2)
-    text-transform: uppercase
-    letter-spacing: 0.6rem
+    margin-bottom: 1.2rem
     // padding-left to off-set letter-spacing
     padding-left: 0.6rem
+    background: linear-gradient(45deg, #ffc0cb, rgb(247, 170, 255))
+    color: rgba(0, 0, 0, 0.54)
+    font-family: 'Montserrat Subrayada', sans-serif
+    font-size: ms(2)
     font-weight: 900
-    background: linear-gradient(45deg, pink, rgb(247, 170, 255))
+    letter-spacing: 0.6rem
+    text-transform: uppercase
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
-    margin-bottom: 1.2rem
-    font-family: 'Montserrat Subrayada', sans-serif
     @include phablet
+        padding-left: 1.2rem
         font-size: ms(3)
         letter-spacing: 1.2rem
-        padding-left: 1.2rem
     @include tablet
+        padding-left: 2.4rem
         font-size: ms(4)
         letter-spacing: 2.4rem
-        padding-left: 2.4rem
-
 
 .landing__intro
-    font-size: ms(-1)
     color: rgba(0, 0, 0, 0.54)
+    font-size: ms(-1)
     letter-spacing: 2px
     text-align: center
 
 .landing__button
     position: absolute
     bottom: 2.4rem
+    left: 50%
     width: 100px
     margin-left: -50px
-    left: 50%
     text-align: center
+
     a
-        text-decoration: none
         color: rgba(0, 0, 0, 0.54)
+        text-decoration: none

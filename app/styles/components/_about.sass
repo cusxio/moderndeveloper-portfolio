@@ -11,30 +11,33 @@
     padding: 0 1.2rem
     @include tablet
         padding: 0 2.4rem
+
     h1
-        margin: 1.2rem 0 1.2rem
-        text-align: right
-        font-weight: 300
-        color: $light-pink
-        letter-spacing: 2px
-        font-size: ms(3)
-        text-transform: uppercase
         position: relative
+        margin: 1.2rem 0
+        color: $light-pink
+        font-size: ms(3)
+        font-weight: 300
+        letter-spacing: 2px
+        text-align: right
+        text-transform: uppercase
+
         span
             color: rgba(0, 0, 0, 0.54)
+
         &::after
-            content: 'A'
             position: absolute
             top: -3.6rem
-            color: #f1f1f1
-            font-weight: 900
-            font-size: ms(8)
             right: 0
+            color: #f1f1f1
+            font-size: ms(8)
+            font-weight: 900
+            content: 'A'
             z-index: -1
 
 .about__intro
-    padding: 0 2.4rem
     width: 100%
+    padding: 0 2.4rem
     @include tablet
         width: 80%
 
@@ -42,32 +45,36 @@
     margin: 0 0 2.4rem
 
 .about__intro--do
-    line-height: 2.4rem
     margin-bottom: 2.4rem
     font-weight: 300
+    line-height: 2.4rem
     @include tablet
         font-size: ms(4)
-        line-height: 3.6rem
         font-weight: 100
+        line-height: 3.6rem
+
     span
         font-weight: 500
 
 .about__intro--contact
-    line-height: 2.4rem
     margin-bottom: 9.6rem
     font-weight: 300
+    line-height: 2.4rem
     @include tablet
         font-size: ms(4)
-        line-height: 3.6rem
         font-weight: 100
+        line-height: 3.6rem
+
     span
         font-weight: 500
+
     a
-        cursor: pointer
-        text-decoration: none
-        color: $light-pink
+        transition: border-color 0.25s ease-in-out, color 0.25s ease-in-out
         border-bottom: 3px solid $light-pink
-        transition: all 0.25s ease-in-out
+        color: $light-pink
+        text-decoration: none
+        cursor: pointer
+
         &:hover
-            color: $dark-pink
             border-color: $dark-pink
+            color: $dark-pink

@@ -3,179 +3,207 @@
 //===================
 
 #contact
-    margin: 0 auto 4.8rem
     max-width: 60rem
+    margin: 0 auto 4.8rem
 
 .contact__title
     margin-bottom: 3.6rem
     padding: 0 1.2rem
     @include tablet
         padding: 0 2.4rem
+
     h1
-        margin: 1.2rem 0 1.2rem
-        text-align: right
-        font-weight: 300
-        color: $light-pink
-        letter-spacing: 2px
-        font-size: ms(3)
-        text-transform: uppercase
         position: relative
+        margin: 1.2rem 0
+        color: $light-pink
+        font-size: ms(3)
+        font-weight: 300
+        letter-spacing: 2px
+        text-align: right
+        text-transform: uppercase
+
         span
             color: rgba(0, 0, 0, 0.54)
+
         &::after
-            content: 'C'
+
             position: absolute
             top: -3.6rem
-            color: #f1f1f1
-            font-weight: 900
-            font-size: ms(8)
             right: 0
+            color: #f1f1f1
+            font-size: ms(8)
+            font-weight: 900
+            content: 'C'
             z-index: -1
 
 
 .contact__intro
-    margin: 6.0rem auto 4.8rem
+    margin: 6rem auto 4.8rem
     font-weight: 500
+
     h1
-        text-transform: uppercase
-        text-align: center
-        font-weight: 700
         margin-top: 2.4rem
+        font-weight: 700
+        text-align: center
+        text-transform: uppercase
+
         span
             border-bottom: 3px solid rgba(0, 0, 0, 0.87)
 
 .contact__intro--tags
-    text-align: center
-    text-transform: uppercase
     font-size: 14px
     font-weight: 500
     letter-spacing: 0.025rem
+    text-align: center
+    text-transform: uppercase
+
     span
         display: block
         @include tablet
             display: initial
-        &:nth-child(2), &:nth-child(3)
+
+        &:nth-child(2),
+        &:nth-child(3)
             position: relative
-            font-weight: 900
-            font-size: ms(1)
             margin: 0 0.025rem
+            font-size: ms(1)
+            font-weight: 900
             @include tablet
                 top: 3px
+
         &:nth-child(1)
             color: $light-pink
 
 .contact__form
-    width: 85%
     display: flex
     flex-flow: row wrap
+    width: 85%
     margin: 0 auto
     @include tablet
         width: 80%
+
     input
         width: 100%
-        appearance: none
+        padding-bottom: 2px
         border: 0
         border-bottom: 1px solid rgba(0, 0, 0, 0.12)
-        outline: 0
-        padding-bottom: 2px
-        color: rgba(0, 0, 0, 0.87)
         border-radius: 0
-        &:active, &:focus
+        outline: 0
+        color: rgba(0, 0, 0, 0.87)
+        appearance: none
+
+        &:active,
+        &:focus
             border-bottom: 2px solid $dark-pink
+
         &:valid ~ label
-            transform: translate3d(0,-30px,0) scale(0.75)
+            transform: translate3d(0, -30px, 0) scale(0.75)
+
         &:focus ~ label
+            transform: translate3d(0, -30px, 0) scale(0.75)
             color: $dark-pink
-            transform: translate3d(0,-30px,0) scale(0.75)
 
 .contact__form--name
-    height: 32px
-    width: 100%
     position: relative
+    width: 100%
+    height: 32px
     margin-bottom: 3.6rem
     @include tablet
         width: 50%
         padding-right: 2.4rem
+
     label
         position: absolute
         bottom: 0
         left: 0
-        transform: translate3d(0,-13px,0) scale(1)
-        transition: transform 0.25s cubic-bezier(0.25,0.8,0.25,1)
+        transform: translate3d(0, -13px, 0) scale(1)
         transform-origin: left top
+        transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25 , 1)
 
 .contact__form--email
-    height: 32px
-    width: 100%
     position: relative
+    width: 100%
+    height: 32px
     margin-bottom: 3.6rem
     @include tablet
         width: 50%
         padding-left: 2.4rem
+
     label
         position: absolute
         bottom: 0
         left: 0
-        transform: translate3d(0,-13px,0) scale(1)
-        transition: transform 0.25s cubic-bezier(0.25,0.8,0.25,1)
+        transform: translate3d(0, -13px, 0) scale(1)
         transform-origin: left top
+        transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1)
         @include tablet
             left: 2.4rem
-        &:active, &:focus
+
+        &:active,
+        &:focus
             border-bottom: 2px solid $dark-pink
+
         &:valid ~ label
-            transform: translate3d(0,-30px,0) scale(0.75)
+            transform: translate3d(0, -30px, 0) scale(0.75)
+
         &:focus ~ label
+            transform: translate3d(0, -30px, 0) scale(0.75)
             color: $dark-pink
-            transform: translate3d(0,-30px,0) scale(0.75)
 
 .contact__form--msg
-    width: 100%
     position: relative
+    width: 100%
     margin-bottom: 2.4rem
+
     textarea
         width: 100%
         height: 9.6rem
-        font-size: 16px
-        resize: vertical
+        padding: 10px
+        transition: border-color 0.25s ease-in, background-color 0.25s ease-in, box-shadow 0.25s ease-in
         border: 1px solid rgba(0, 0, 0, 0.12)
         outline: 0
-        appearance: none
-        transition: all 0.25s ease-in
-        padding: 10px
         background-color: #fafafa
-        box-shadow: inset 0 1px 2px rgba(0,0,0,0.075)
         color: rgba(0, 0, 0, 0.87)
+        font-size: 16px
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075)
+        appearance: none
+        resize: vertical
+
         &:focus
             border-color: $light-pink
             background-color: #fff
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.075),0 0 5px pink
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px #ffc0cb
+
             ~ label
                 color: $dark-pink
+
     label
         position: absolute
         top: 0
         left: 0
-        transform: translate3d(0,-25px,0)
+        transform: translate3d(0, -25px, 0)
         transition: color 0.25s ease-in
 
 .contact__form--button
     width: 100%
     text-align: center
+
     button
-        cursor: pointer
-        text-transform: uppercase
         padding: 0.6rem 2.4rem
-        appearance: none
+        transition: background-color 0.25s ease, box-shadow 0.25s ease
         border: 0
+        outline: 0
         background-color: $light-pink
         color: #fafafa
         font-size: 14px
         letter-spacing: 2px
-        outline: 0
-        transition: all 0.25s ease
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+        text-transform: uppercase
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
+        cursor: pointer
+        appearance: none
+
         &:active
             background-color: $dark-pink
+
         &:hover
             box-shadow: rgba(0, 0, 0, 0.3) 0 5px 16px 0

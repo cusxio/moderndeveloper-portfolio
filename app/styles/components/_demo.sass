@@ -10,30 +10,33 @@
 
 .demo__button
     display: inline-block
-    border-radius: 2px
-    line-height: 36px
-    padding: 0 16px
     margin: 0 15px
-    font-size: 14px
-    text-transform: uppercase
-    cursor: pointer
-    transition: background-color 0.2s ease-in-out
-    background-color: rgba(158,158,158,.2)
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)
-    font-weight: 500
     margin-bottom: 1.2rem
+    padding: 0 16px
+    transition: background-color 0.2s ease-in-out
+    border-radius: 2px
+    background-color: rgba(158, 158, 158, 0.2)
+    font-size: 14px
+    font-weight: 500
+    line-height: 36px
+    text-transform: uppercase
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
+    cursor: pointer
+
     &:hover
-        background-color: rgba(158,158,158,.3)
+        background-color: rgba(158, 158, 158, 0.3)
+
     &:active
-        background-color: rgba(158,158,158,.4)
+        background-color: rgba(158, 158, 158, 0.4)
+
     .ion
         padding-right: 10px
 
 .demo__button.-small
     padding: 0 10px
-    font-size: 12px
-    color: #fff
     background-color: #3f51b5
+    color: #fff
+    font-size: 12px
 
 //===================
 // DEMO - Sidebar
@@ -45,68 +48,76 @@
 .carousel__item--demo.-sidebar
     width: 90%
     max-width: 20rem
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12)
     padding: 100px auto
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
 
 .sidebar__header
+    position: relative
+    height: 100px
     border-top-left-radius: 2px
     border-top-right-radius: 2px
-    position: relative
     background-image: url('https://avatars2.githubusercontent.com/u/6487613?v=3&s=460')
-    height: 100px
     background-position: left center
 
 .sidebar__header--overlay
-    border-top-left-radius: 2px
-    border-top-right-radius: 2px
-    background-color: rgba(0,0,0,0.6)
     width: 100%
     height: 100%
+    border-top-left-radius: 2px
+    border-top-right-radius: 2px
+    background-color: rgba(0, 0, 0, 0.6)
 
 .sidebar__header--name
-    text-transform: uppercase
     position: absolute
-    font-weight: 200
-    bottom: 0
     right: 0
-    font-size: ms(2)
-    color: #fff
+    bottom: 0
     margin-right: 10px
+    color: #fff
+    font-size: ms(2)
+    font-weight: 200
+    text-transform: uppercase
+
     span
         &:nth-child(2)
             font-weight: bold
 
 .sidebar__info
     padding: 20px
+
     h4
-        text-transform: uppercase
-        text-align: center
         font-size: 16px
+        text-align: center
+        text-transform: uppercase
+
     p
-        color: #AAA
+        color: #aaa
         line-height: 36px
+
     span
         color: #000
         font-weight: bold
 
 .sidebar__contacts
     width: 100%
-    border-top: 1px solid rgba(0,0,0,.1)
     padding: 10px 0
+    border-top: 1px solid rgba(0, 0, 0, 0.1)
 
 .sidebar__contacts--links
     max-width: 50%
     margin: 0 auto
     text-align: center
+
     a
-        text-decoration: none
+        transition: color 0.2s ease-in-out
         color: #444
         font-size: 30px
-        transition: color 0.2s ease-in-out
+        text-decoration: none
+
         &:nth-child(1)
             margin-right: 20px
+
             &:hover
                 color: #00aced
+
         &:nth-child(2):hover
             color: #885ead
 
@@ -114,13 +125,13 @@
 // DEMO - Calculator
 //===================
 .carousel__item--demo.-calculator
-    height: 100%
-    width: 200px
-    max-width: 18rem
     display: flex
     flex-direction: column
+    width: 200px
+    max-width: 18rem
+    height: 100%
     border-radius: 15px
-    box-shadow: 0 10px 30px 0 rgba(50, 50, 50, .5)
+    box-shadow: 0 10px 30px 0 rgba(50, 50, 50, 0.5)
     @include mobile
         width: 220px
     @include phablet
@@ -129,33 +140,34 @@
         width: 70%
 
 .calculator__results
-    user-select: none
-    cursor: default
-    font-family: 'Open Sans', sans-serif
+    display: flex
+    flex: 1.7
+    flex-direction: column
+    padding-right: 40px
+    padding-left: 40px
     border-top-left-radius: 15px
     border-top-right-radius: 15px
     background-color: #fff
-    display: flex
-    flex-direction: column
-    flex: 1.7
-    padding-right: 40px
-    padding-left: 40px
+    font-family: 'Open Sans', sans-serif
+    cursor: default
+    user-select: none
 
-.calculator__results--last, .calculator__results--current
+.calculator__results--last,
+.calculator__results--current
     display: flex
     flex: 1
     justify-content: flex-end
     overflow: hidden
 
 .calculator__results--last
-    color: #8E97A2
+    align-items: flex-end
+    color: #8e97a2
     font-size: 0.8rem
     font-weight: 300
-    align-items: flex-end
 
 .calculator__results--current
-    align-items: flex-start
     flex: 1.1
+    align-items: flex-start
     font-size: 1.4rem
     font-weight: 400
     letter-spacing: 1.5px
@@ -164,81 +176,91 @@
     display: flex
     flex: 5
 
-.calculator__buttons--c3, .calculator__buttons--c1
+.calculator__buttons--c3,
+.calculator__buttons--c1
     button
-        font-size: 1rem
-        color: #444
-        font-weight: 400
         margin: 0
         padding: 0
-        line-height: 0
-        border: none
-        box-shadow: inset 1px 1px 0 0 #DECAE5
+        transition: font-size 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+        border: 0
         outline: none
-        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
         background-color: transparent
+        color: #444
+        font-size: 1rem
+        font-weight: 400
+        line-height: 0
+        box-shadow: inset 1px 1px 0 0 #decae5
+
         &:hover
             font-size: 1.2rem
 
 .calculator__buttons--c3
     display: flex
-    flex-direction: column
     flex: 3
+    flex-direction: column
 
 .calculator__buttons--c1
     display: flex
-    flex-direction: column
     flex: 1
-    background: linear-gradient(180deg, #f7cf62, #ff9d66 82%)
+    flex-direction: column
     border-bottom-right-radius: 15px
+    background: linear-gradient(180deg, #f7cf62, #ff9d66 82%)
+
+    button
+        flex: 1
+        color: #fff
+        font-size: 1.2rem
+        font-weight: 300
+
+        &:hover
+            background-color: rgba(50, 50, 50, 0.1)
+
+        &:last-child
+            flex: 2
 
 .c3
-    flex: 1
     display: flex
+    flex: 1
     flex-direction: row
 
 .c3.-one
     button
-        background-color: #f1e1fd
         flex: 1
+        background-color: #f1e1fd
+
         &:hover
             background-color: #e3e1fd
 
-.c3.-two, .c3.-three
+.c3.-two,
+.c3.-three
     button
-        background-color: #faedff
         flex: 1
+        background-color: #faedff
+
         &:hover
             background-color: #edf2ff
 
 .c3.-four
     button
-        background-color: #f1edff
         flex: 1
+        background-color: #f1edff
+
         &:hover
             background-color: #fbffed
 
 .c3.-five
     button
         background-color: #f1edff
+
         &:hover
             background-color: #fbffed
+
         &:first-child
             flex: 2
             border-bottom-left-radius: 15px
+
         &:last-child
             flex: 1
-
-.calculator__buttons--c1
-    button
-        font-size: 1.2rem
-        font-weight: 300
-        color: #fff
-        flex: 1
-        &:hover
-            background-color: rgba(50, 50, 50, .1)
-        &:last-child
-            flex: 2
 
 //===================
 // DEMO - CSS Accordion
@@ -255,9 +277,9 @@
 
 .-css-accordion
     label
-        color: #fff
-        padding: 0.6rem
         display: block
+        padding: 0.6rem
+        color: #fff
         font-weight: 400
         cursor: pointer
 
@@ -265,59 +287,65 @@
     position: relative
     // Refinement
     top: -1px
-    margin-bottom: -1px
-    color: rgba(0,0,0,0.54)
     max-height: 0
+    margin-bottom: -1px
     transition: max-height 0.5s ease
+    color: rgba(0, 0, 0, 0.54)
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2)
     overflow: hidden
-    box-shadow: inset 0 3px 7px rgba(0,0,0, 0.2)
     will-change: max-height
 
 .css-accordion__content--quotes
-    padding: 1.2rem 1.2rem
+    padding: 1.2rem
     @include phablet
         padding: 2.4rem 1.2rem
+
     blockquote
         position: relative
+
         &::before
-            content: "\201C"
-            font-size: 2.4rem
-            font-family: serif
             position: absolute
             top: -20px
             left: -10px
-            color: rgba(0,0,0,0.24)
+            color: rgba(0, 0, 0, 0.24)
+            font-family: serif
+            font-size: 2.4rem
             font-weight: 700
+            content: "\201C"
+
         p
-            text-align: right
-            font-style: italic
             margin-top: 1.2rem
+            font-style: italic
+            text-align: right
 
 #css-accordion-1:checked + label
     border-bottom-left-radius: 3px
     border-bottom-right-radius: 3px
+
     + .css-accordion__content
         max-height: 15rem
-        border-bottom: 1px solid rgba(0,0,0, 0.2)
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2)
 
 #css-accordion-2:checked + label
     border-bottom-left-radius: 3px
     border-bottom-right-radius: 3px
+
     + .css-accordion__content
         max-height: 15rem
-        border-bottom: 1px solid rgba(0,0,0, 0.2)
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2)
 
 #css-accordion-3:checked + label
     border-bottom-left-radius: 3px
     border-bottom-right-radius: 3px
+
     + .css-accordion__content
         max-height: 15rem
-        border-bottom: 1px solid rgba(0,0,0, 0.2)
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2)
 
 #css-accordion-4:checked + label
     + .css-accordion__content
         max-height: 15rem
-        border-bottom: 1px solid rgba(0,0,0, 0.2)
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2)
 
 label[for="css-accordion-1"]
     border-top-left-radius: 3px

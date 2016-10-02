@@ -18,7 +18,7 @@ $breakpoints: (
 
     @each $key, $value in $args {
         @if $value {
-              $expr: "#{$expr} and (#{$key}: #{$value})";
+            $expr: '#{$expr} and (#{$key}: #{$value})';
         }
     }
 
