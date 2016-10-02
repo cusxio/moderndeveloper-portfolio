@@ -3,6 +3,11 @@ import bs from 'browser-sync';
 import del from 'del';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import runSequence from 'run-sequence';
+import { rollup } from 'rollup';
+import babel from 'rollup-plugin-babel';
+import uglify from 'rollup-plugin-uglify';
+import commonjs from 'rollup-plugin-commonjs';
+import node from 'rollup-plugin-node-resolve';
 
 const $ = gulpLoadPlugins();
 const PRODUCTION = process.env.NODE_ENV === 'production';
@@ -25,29 +30,39 @@ gulp.task('styles', () => {
         'app/styles/**/*.sass',
     ])
     .pipe($.if(!PRODUCTION, $.newer('./tmp/styles')))
+    .pipe($.sourcemaps.init())
     .pipe($.sass({ precision: 10 }).on('error', $.sass.logError))
     .pipe($.autoprefixer(BROWSERS))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe($.if(!PRODUCTION, gulp.dest('.tmp/styles')))
     .pipe($.if(PRODUCTION, $.cssnano()))
     .pipe($.if(PRODUCTION, $.size({ title: 'Styles' })))
+    .pipe($.if(PRODUCTION, $.sourcemaps.write('.')))
     .pipe($.if(PRODUCTION, gulp.dest('dist/styles')))
     .pipe(bs.stream({ match: '**/*.css' }));
 });
 
 gulp.task('scripts', () => {
-    gulp.src([
-        'app/scripts/main.js',
-    ])
-    .pipe($.if(!PRODUCTION, $.newer('./tmp/scripts')))
-    .pipe($.sourcemaps.init())
-    .pipe($.babel())
-    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe($.if(!PRODUCTION, gulp.dest('.tmp/scripts')))
-    .pipe($.if(PRODUCTION, $.concat('main.min.js')))
-    .pipe($.if(PRODUCTION, $.uglify()))
-    .pipe($.if(PRODUCTION, $.size({ title: 'Scripts' })))
-    .pipe($.if(PRODUCTION, $.sourcemaps.write('.')))
-    .pipe($.if(PRODUCTION, gulp.dest('dist/scripts')));
+    return rollup({
+        entry: 'app/scripts/main.js',
+        plugins: [
+            node({
+                jsnext: true,
+            }),
+            commonjs(),
+            babel({
+                presets: 'es2015-rollup',
+                babelrc: false,
+            }),
+            PRODUCTION ? uglify() : {},
+        ],
+    }).then((bundle) => {
+        return bundle.write({
+            format: 'es',
+            sourceMap: PRODUCTION,
+            dest: PRODUCTION ? 'dist/scripts/main.js' : '.tmp/scripts/main.js',
+        });
+    });
 });
 
 gulp.task('images', () => {
@@ -76,7 +91,6 @@ gulp.task('development', ['scripts', 'styles'], () => {
 
 gulp.task('html', () => {
     return gulp.src('app/**/*.html')
-        .pipe($.useref({ noAssets: true }))
         .pipe($.if('*.html', $.htmlmin({
             removeAttributeQuotes: true,
             removeComments: true,
