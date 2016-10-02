@@ -1,9 +1,15 @@
 import domReady from 'domready';
+import 'browsernizr/test/touchevents';
+import Modernizr from 'browsernizr';
 import createStore from './utilities/createStore';
 import calculatorReducer from './utilities/calculatorReducer';
 import prettifyDisplay from './utilities/prettifyDisplay';
+import BrowserInteractions from './utilities/browserInteractions';
 
 domReady(function () {
+    let touchEvent = Modernizr.touchevents;
+    touchEvent || new BrowserInteractions('h', 's');
+
     /**
     * Adding active classes to nav for color.
     */
@@ -17,18 +23,6 @@ domReady(function () {
                 el.classList.add('nav-active');
             }
         });
-    });
-
-    /**
-    * Scroll event listener to add shadow to nav.
-    */
-    window.addEventListener('scroll', function () {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        if (scrollTop > 0) {
-            document.querySelector('.nav').classList.add('body-is-scrolled');
-        } else {
-            document.querySelector('.nav').classList.remove('body-is-scrolled');
-        }
     });
 
     /**

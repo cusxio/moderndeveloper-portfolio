@@ -14,6 +14,8 @@ const initialState = {
     current: '0',
 };
 
+const eval2 = eval; //eslint-disable-line
+
 export default function reducer(state = initialState, action) {
     let current;
     let last;
@@ -72,7 +74,7 @@ export default function reducer(state = initialState, action) {
             try {
                 return Object.assign({}, state, {
                     last: state.current,
-                    current: fixFloat(eval(state.current)) + '' //eslint-disable-line
+                    current: fixFloat(eval2(state.current)) + '' //eslint-disable-line
                 });
             } catch (e) {
                 return Object.assign({}, state, {
