@@ -21,5 +21,13 @@ $ npm run start
 
 ```bash
 # For Github Pages, Surge.sh, and etc.
-$ npm run build
+$ npm run production
 ```
+
+## Built With
+
+[Frontend Init](https://github.com/cusxio/frontend-init)
+
+## License
+
+MIT © Jonathan Chan
