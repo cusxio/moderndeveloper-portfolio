@@ -17,17 +17,17 @@ export default function createStore(reducer) {
 
     function dispatch(action) {
         state = reducer(state, action);
-        listeners.forEach(function (listener) {
-            return listener();
-        });
+        listeners.forEach((listener) =>
+             listener()
+        );
     }
 
     function subscribe(listener) {
         listeners.push(listener);
-        return function () {
-            listeners = listeners.filter(function (l) {
-                return l !== listener;
-            });
+        return () => {
+            listeners = listeners.filter((l) =>
+                 l !== listener
+            );
         };
     }
 

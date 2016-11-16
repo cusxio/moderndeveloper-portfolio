@@ -31,44 +31,44 @@ export default function reducer(state = initialState, action) {
             last = current.slice(-1);
             if (last === '+' || last === '-' || last === '*' || last === '/') {
                 return Object.assign({}, state, {
-                    current: current.slice(0, -1) + '+',
+                    current: `${current.slice(0, -1)}+`,
                 });
             }
             return Object.assign({}, state, {
-                current: current + '+',
+                current: `${current}+`,
             });
         case 'MINUS':
             current = state.current;
             last = current.slice(-1);
             if (last === '+' || last === '-' || last === '*' || last === '/') {
                 return Object.assign({}, state, {
-                    current: current.slice(0, -1) + '-',
+                    current: `${current.slice(0, -1)}-`,
                 });
             }
             return Object.assign({}, state, {
-                current: current + '-',
+                current: `${current}-`,
             });
         case 'MULTI':
             current = state.current;
             last = current.slice(-1);
             if (last === '+' || last === '-' || last === '*' || last === '/') {
                 return Object.assign({}, state, {
-                    current: current.slice(0, -1) + '*',
+                    current: `${current.slice(0, -1)}*`,
                 });
             }
             return Object.assign({}, state, {
-                current: current + '*',
+                current: `${current}*`,
             });
         case 'DIVIDE':
             current = state.current;
             last = current.slice(-1);
             if (last === '+' || last === '-' || last === '*' || last === '/') {
                 return Object.assign({}, state, {
-                    current: current.slice(0, -1) + '/',
+                    current: `${current.slice(0, -1)}/`,
                 });
             }
             return Object.assign({}, state, {
-                current: current + '/',
+                current: `${current}/`,
             });
         case 'EQUAL':
             try {
@@ -86,14 +86,15 @@ export default function reducer(state = initialState, action) {
             return Object.assign({}, state, {
                 current: state.current === '0' ? action.number : state.current + action.number,
             });
-        case 'DOT':
+        case 'DOT': {
             current = state.current;
-            var lastLetter = current.slice(-1);
+            const lastLetter = current.slice(-1);
             if (lastLetter !== '.') {
                 return Object.assign({}, state, {
-                    current: state.current + '.',
+                    current: `${state.current}.`,
                 });
             }
+        }
         default: //eslint-disable-line
             return state;
     }

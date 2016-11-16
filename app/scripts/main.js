@@ -6,16 +6,16 @@ import calculatorReducer from './utilities/calculatorReducer';
 import prettifyDisplay from './utilities/prettifyDisplay';
 import BrowserInteractions from './utilities/browserInteractions';
 
-domReady(function () {
-    let touchEvent = Modernizr.touchevents;
+domReady(() => {
+    const touchEvent = Modernizr.touchevents;
     touchEvent || new BrowserInteractions('h', 's');
 
     /**
     * Adding active classes to nav for color.
     */
     const navButtons = document.querySelectorAll('.nav__links a[href*="#"]');
-    [].forEach.call(navButtons, function (el) {
-        el.addEventListener('click', function () {
+    [].forEach.call(navButtons, (el) => {
+        el.addEventListener('click', () => {
             if (document.querySelector('.nav__links .nav-active')) {
                 document.querySelector('.nav__links .nav-active').classList.remove('nav-active');
                 el.classList.add('nav-active');
@@ -30,8 +30,8 @@ domReady(function () {
     */
     const mobileNavToggle = document.querySelectorAll('label[for=backdrop]');
 
-    [].forEach.call(mobileNavToggle, function (el) {
-        el.addEventListener('click', function () {
+    [].forEach.call(mobileNavToggle, (el) => {
+        el.addEventListener('click', () => {
             document.querySelector('body').classList.toggle('drawer-is-opened');
         });
     });
@@ -47,8 +47,8 @@ domReady(function () {
      * Attaching event listeners to all calculator buttons.
      *
      */
-    [].forEach.call(document.querySelectorAll('.-calculator button'), function (el) {
-        el.addEventListener('click', function () {
+    [].forEach.call(document.querySelectorAll('.-calculator button'), (el) => {
+        el.addEventListener('click', () => {
             const type = el.getAttribute('data-type');
             const value = el.getAttribute('data-value');
             if (type === 'NUMBER') {

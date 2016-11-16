@@ -13,7 +13,7 @@ gulp.task('html', tasks.html);
 
 gulp.task('images', tasks.images);
 
-gulp.task('static', tasks.static);
+gulp.task('static', tasks.staticTask);
 
 gulp.task('rev', tasks.rev);
 
@@ -27,4 +27,3 @@ gulp.task('production', tasks.production);
 
 gulp.task('deploy:gh-pages', tasks.ghPages);
 
-gulp.task('surge', tasks.surge);

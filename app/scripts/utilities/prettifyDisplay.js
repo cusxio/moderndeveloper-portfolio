@@ -11,7 +11,7 @@ export default function prettifyDisplay(input, spaces) {
             reg: /\//g,
             dest: '÷',
         }, {
-            reg: /\-/g,
+            reg: /-/g,
             dest: '−',
         }, {
             reg: /\+/g,
@@ -20,7 +20,7 @@ export default function prettifyDisplay(input, spaces) {
     ];
     symbols.forEach((item) => {
         if (spaces) {
-            input = input.replace(item.reg, ' ' + item.dest + ' ');
+            input = input.replace(item.reg, ` ${item.dest} `);
         } else {
             input = input.replace(item.reg, item.dest);
         }

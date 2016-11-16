@@ -1,3 +1,5 @@
+/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
+
 import debounce from 'lodash.debounce';
 import throttle from 'lodash.throttle';
 
@@ -18,12 +20,12 @@ export default class BrowserInteractions {
         this._scrollThrottle();
     }
     _hoverThrottle() {
-        debounce(function () {
+        debounce(function cb() {
             document.body.classList.add(this.hoverClass);
         }, 100).bind(this)();
     }
     _scrollThrottle() {
-        throttle(function () {
+        throttle(function cb() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
             scrollTop > 0.15 * window.innerHeight ? document.body.classList.add(this.scrollClass) : document.body.classList.remove(this.scrollClass);
         }).bind(this)();
