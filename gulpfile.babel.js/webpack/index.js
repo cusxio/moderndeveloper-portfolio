@@ -38,7 +38,7 @@ config.resolve = {
 };
 
 config.entry = {
-    app: ['./app.js'],
+    main: ['./main.js'],
 };
 
 config.output = {
@@ -66,7 +66,7 @@ config.resolveLoader = {
 };
 
 if (dev) {
-    config.entry.app.unshift(
+    config.entry.main.unshift(
         'webpack-hot-middleware/client?reload=true'
     );
 
