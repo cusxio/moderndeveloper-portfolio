@@ -27,4 +27,3 @@ gulp.task('production', tasks.production);
 
 gulp.task('deploy:gh-pages', tasks.ghPages);
 
-gulp.task('surge', tasks.surge);
