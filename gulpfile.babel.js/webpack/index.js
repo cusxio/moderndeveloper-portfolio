@@ -54,7 +54,6 @@ config.module = {
         loader: 'babel-loader',
         query: {
             presets: [['es2015', { loose: true, modules: false }], 'stage-0'],
-            plugins: ['transform-runtime'],
             babelrc: false,
         },
     }],
