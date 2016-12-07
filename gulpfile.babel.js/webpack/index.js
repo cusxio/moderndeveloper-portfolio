@@ -1,5 +1,7 @@
 import { resolve, join } from 'path';
 import webpack from 'webpack';
+import WebpackMd5Hash from 'webpack-md5-hash';
+import EmmitStatsPlugin from './emmit-stats-plugin';
 
 // =====================================
 //  VARIABLES
@@ -38,12 +40,12 @@ config.resolve = {
 };
 
 config.entry = {
-    main: ['./main.js'],
+    app: ['./app.js'],
 };
 
 config.output = {
     path: distDir,
-    filename: '[name].js',
+    filename: dev ? '[name].js' : '[name]-[chunkhash:10].js',
     publicPath: '/scripts/',
 };
 
@@ -66,7 +68,7 @@ config.resolveLoader = {
 };
 
 if (dev) {
-    config.entry.main.unshift(
+    config.entry.app.unshift(
         'webpack-hot-middleware/client?reload=true'
     );
 
@@ -76,6 +78,8 @@ if (dev) {
     );
 } else {
     config.plugins.push(
+        new WebpackMd5Hash(),
+        new EmmitStatsPlugin(),
         new webpack.LoaderOptionsPlugin({
             minimize: true,
         }),
