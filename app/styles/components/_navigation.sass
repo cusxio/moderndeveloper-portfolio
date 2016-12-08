@@ -107,7 +107,7 @@
         font-size: 14px
         text-transform: uppercase
 
-    input[type="text"]
+    input
 
         position: relative
         padding-bottom: 2px
@@ -121,10 +121,10 @@
         &:focus
             border-bottom: 2px solid $dark-pink
 
-.nav__search--fields input[type="text"]:valid ~ label
+.nav__search--fields input:valid ~ label
     transform: translate3d(0, -30px, 0) scale(0.75)
 
-.nav__search--fields input[type="text"]:focus ~ label
+.nav__search--fields input:focus ~ label
     transform: translate3d(0, -30px, 0) scale(0.75)
     color: $dark-pink
 

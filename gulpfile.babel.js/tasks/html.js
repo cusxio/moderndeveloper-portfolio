@@ -19,6 +19,8 @@ export default function html() {
             removeEmptyAttributes: true,
             collapseWhitespace: true,
             collapseBooleanAttributes: true,
+            minifyCSS: true,
+            minifyJS: true,
         })))
         .pipe(gulp.dest(config.html.dest))
         .on('end', browserSync.reload);
